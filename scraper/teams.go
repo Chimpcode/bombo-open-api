@@ -2,12 +2,12 @@ package scraper
 
 import (
 	"github.com/anaskhan96/soup"
-	"github.com/k0kubun/pp"
 	"strings"
 	"encoding/json"
+	"log"
 )
 
-func GetFullTeamsInfo() ([]byte, error) {
+func GetFullTeamsInfo(verbose bool) ([]byte, error) {
 	tournamentUrl := TournamentA
 
 	resp, err := soup.Get(tournamentUrl)
@@ -24,7 +24,9 @@ func GetFullTeamsInfo() ([]byte, error) {
 	for _, p := range body.FindAll("tr") {
 		p_link := p.Find("a")
 		team_name = strings.ToLower(p_link.Text())
-		pp.Println(team_name)
+		if verbose {
+			log.Println(team_name)
+		}
 		team_url := BaseScoreBoard + p_link.Attrs()["href"]
 		plan := team_url + "/plantilla"
 
@@ -92,6 +94,7 @@ func GetFullTeamsInfo() ([]byte, error) {
 					"played": played,
 					"goals": goals,
 					"yellows": yellows,
+					"team": team_name,
 					"reds": reds,
 				}
 				players[field] = append(players[field], meta_data)

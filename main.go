@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	data, err := scraper.GetFullTeamsInfo()
+	data, err := scraper.GetFullTeamsInfo(false)
 	if err != nil {
 		panic(err.Error())
 	}
