@@ -5,14 +5,15 @@ import (
 	"strings"
 	"encoding/json"
 	"log"
+	"time"
 )
 
-func GetFullTeamsInfo(verbose bool) ([]byte, error) {
-	tournamentUrl := TournamentA
+func GetFullTeamsInfo(tournamentUrl string, verbose bool) ([]byte, time.Duration, error) {
+	t0 := time.Now()
 
 	resp, err := soup.Get(tournamentUrl)
 	if err != nil {
-		return []byte{}, err
+		return []byte{}, time.Now().Sub(t0), err
 	}
 	doc := soup.HTMLParse(resp)
 
@@ -32,7 +33,7 @@ func GetFullTeamsInfo(verbose bool) ([]byte, error) {
 
 		r, err := soup.Get(plan)
 		if err != nil {
-			return []byte{}, err
+			return []byte{}, time.Now().Sub(t0), err
 		}
 		plan_soup := soup.HTMLParse(r)
 		player_table := plan_soup.Find("table", "class", "base-table squad-table")
@@ -103,7 +104,8 @@ func GetFullTeamsInfo(verbose bool) ([]byte, error) {
 		participants_data[team_name] = players
 	}
 
-	data, err := json.Marshal(participants_data)
+	data, err := json.MarshalIndent(participants_data, "", "  ")
 
-	return data, err
+	t1 := time.Now()
+	return data, t1.Sub(t0), err
 }
