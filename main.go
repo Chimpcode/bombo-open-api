@@ -1,30 +1,14 @@
 package main
 
 import (
-	"./scraper"
-	"fmt"
-	"os"
+	"github.com/kataras/iris"
+	"./server"
 )
 
 func main() {
-	data, timeInto, err := scraper.GetFullTeamsInfo(scraper.TournamentB, true)
-	if err != nil {
-		panic(err.Error())
-	}
-	fmt.Println("Downloaded data in ", timeInto)
-	fmt.Println(data)
+	app := iris.Default()
+	api := app.Party("/api/v1")
+	server.LinkApi(api)
 
-	file, err := os.Create("./data/premier_league.json")
-	if err != nil {
-		panic(err.Error())
-	}
-	defer file.Close()
-
-	n, err := file.Write(data)
-	if err != nil {
-		panic(err.Error())
-	}
-
-	fmt.Printf("Writing %d bytes", n)
-
+	app.Run(iris.Addr(":9800"))
 }
