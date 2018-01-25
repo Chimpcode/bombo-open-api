@@ -87,10 +87,18 @@ func GetFullTeamsInfo(tournamentUrl string, verbose bool) ([]byte, time.Duration
 						}
 					}
 				}
+				nCode := ""
+				nationCodes := strings.Split(NationsCode[nation], "_")
+				if len(nationCodes) > 1 {
+					nCode = strings.ToLower(nationCodes[1])
+				} else {
+					nCode = ""
+				}
 				meta_data := map[string]string{
 					"j_number": jersey_number,
 					"name": name,
 					"nation": nation,
+					"nation_code": nCode,
 					"player_age": player_age,
 					"played": played,
 					"goals": goals,
