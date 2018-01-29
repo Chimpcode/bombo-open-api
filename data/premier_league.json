@@ -15,7 +15,7 @@
       },
       {
         "goals": "0",
-        "j_number": "3",
+        "j_number": "7",
         "name": "Dragomir Vlad",
         "nation": "Rumanía",
         "nation_code": "",
@@ -221,7 +221,7 @@
       },
       {
         "goals": "0",
-        "j_number": "6",
+        "j_number": "5",
         "name": "Mavropanos Konstantinos",
         "nation": "Grecia",
         "nation_code": "gr",
@@ -319,7 +319,7 @@
       },
       {
         "goals": "0",
-        "j_number": "61",
+        "j_number": "10",
         "name": "Nelson Reiss",
         "nation": "Inglaterra",
         "nation_code": "uk",
@@ -395,7 +395,7 @@
       },
       {
         "goals": "0",
-        "j_number": "",
+        "j_number": "1",
         "name": "Iliev Dejan",
         "nation": "República de Macedonia",
         "nation_code": "",
@@ -818,18 +818,6 @@
   "brighton": {
     "centrocampistas": [
       {
-        "goals": "0",
-        "j_number": "5",
-        "name": "Collar Will",
-        "nation": "Inglaterra",
-        "nation_code": "uk",
-        "played": "0",
-        "player_age": "?",
-        "reds": "0",
-        "team": "brighton",
-        "yellows": "0"
-      },
-      {
         "goals": "4",
         "j_number": "13",
         "name": "Gross Pascal",
@@ -876,18 +864,6 @@
         "reds": "0",
         "team": "brighton",
         "yellows": "4"
-      },
-      {
-        "goals": "0",
-        "j_number": "35",
-        "name": "LuaLua Kazenga",
-        "nation": "RD Congo",
-        "nation_code": "",
-        "played": "0",
-        "player_age": "27",
-        "reds": "0",
-        "team": "brighton",
-        "yellows": "0"
       },
       {
         "goals": "1",
@@ -974,30 +950,6 @@
         "reds": "0",
         "team": "brighton",
         "yellows": "1"
-      },
-      {
-        "goals": "0",
-        "j_number": "3",
-        "name": "Cox George",
-        "nation": "Inglaterra",
-        "nation_code": "uk",
-        "played": "0",
-        "player_age": "20",
-        "reds": "0",
-        "team": "brighton",
-        "yellows": "0"
-      },
-      {
-        "goals": "0",
-        "j_number": "18",
-        "name": "Dallison Tom",
-        "nation": "Inglaterra",
-        "nation_code": "uk",
-        "played": "0",
-        "player_age": "21",
-        "reds": "0",
-        "team": "brighton",
-        "yellows": "0"
       },
       {
         "goals": "0",
@@ -1116,7 +1068,7 @@
         "nation": "Irlanda",
         "nation_code": "ie",
         "played": "0",
-        "player_age": "17",
+        "player_age": "18",
         "reds": "0",
         "team": "brighton",
         "yellows": "0"
@@ -3293,6 +3245,18 @@
       },
       {
         "goals": "0",
+        "j_number": "6",
+        "name": "Huth Robert",
+        "nation": "Alemania",
+        "nation_code": "de",
+        "played": "0",
+        "player_age": "33",
+        "reds": "0",
+        "team": "leicester",
+        "yellows": "0"
+      },
+      {
+        "goals": "0",
         "j_number": "39",
         "name": "Johnson Darnell",
         "nation": "Inglaterra",
@@ -3519,7 +3483,7 @@
       },
       {
         "goals": "0",
-        "j_number": "53",
+        "j_number": "8",
         "name": "Ejaria Oviemuno",
         "nation": "Inglaterra",
         "nation_code": "uk",
@@ -3787,7 +3751,7 @@
       },
       {
         "goals": "0",
-        "j_number": "58",
+        "j_number": "10",
         "name": "Woodburn Benjamin",
         "nation": "Gales",
         "nation_code": "",
@@ -3815,7 +3779,7 @@
     "porteros": [
       {
         "goals": "0",
-        "j_number": "1",
+        "j_number": "13",
         "name": "Grabara Kamil",
         "nation": "Polonia",
         "nation_code": "pl",
@@ -4299,6 +4263,18 @@
       },
       {
         "goals": "0",
+        "j_number": "47",
+        "name": "Gomes Angel",
+        "nation": "Inglaterra",
+        "nation_code": "uk",
+        "played": "0",
+        "player_age": "17",
+        "reds": "0",
+        "team": "manchester utd",
+        "yellows": "0"
+      },
+      {
+        "goals": "0",
         "j_number": "21",
         "name": "Herrera Ander",
         "nation": "España",
@@ -4468,18 +4444,6 @@
         "yellows": "2"
       },
       {
-        "goals": "0",
-        "j_number": "38",
-        "name": "Tuanzebe Axel",
-        "nation": "Inglaterra",
-        "nation_code": "uk",
-        "played": "1",
-        "player_age": "20",
-        "reds": "0",
-        "team": "manchester utd",
-        "yellows": "0"
-      },
-      {
         "goals": "3",
         "j_number": "25",
         "name": "Valencia Antonio",
@@ -4562,7 +4526,7 @@
         "nation": "Portugal",
         "nation_code": "pt",
         "played": "",
-        "player_age": "54",
+        "player_age": "55",
         "reds": "",
         "team": "manchester utd",
         "yellows": ""
@@ -5170,7 +5134,7 @@
         "nation": "Inglaterra",
         "nation_code": "uk",
         "played": "12",
-        "player_age": "23",
+        "player_age": "24",
         "reds": "0",
         "team": "southampton",
         "yellows": "3"
@@ -5212,6 +5176,18 @@
         "reds": "0",
         "team": "southampton",
         "yellows": "1"
+      },
+      {
+        "goals": "0",
+        "j_number": "9",
+        "name": "Carrillo Guido",
+        "nation": "Argentina",
+        "nation_code": "ar",
+        "played": "0",
+        "player_age": "26",
+        "reds": "0",
+        "team": "southampton",
+        "yellows": "0"
       },
       {
         "goals": "3",
@@ -5836,7 +5812,7 @@
         "nation": "Inglaterra",
         "nation_code": "uk",
         "played": "3",
-        "player_age": "34",
+        "player_age": "35",
         "reds": "0",
         "team": "stoke",
         "yellows": "0"
@@ -5916,18 +5892,6 @@
         "reds": "0",
         "team": "swansea",
         "yellows": "5"
-      },
-      {
-        "goals": "0",
-        "j_number": "56",
-        "name": "Fulton Jay",
-        "nation": "Escocia",
-        "nation_code": "",
-        "played": "2",
-        "player_age": "23",
-        "reds": "0",
-        "team": "swansea",
-        "yellows": "1"
       },
       {
         "goals": "0",
@@ -6279,7 +6243,7 @@
       },
       {
         "goals": "0",
-        "j_number": "14",
+        "j_number": "42",
         "name": "Georgiou Anthony",
         "nation": "Chipre",
         "nation_code": "cy",
@@ -7011,18 +6975,6 @@
       },
       {
         "goals": "0",
-        "j_number": "8",
-        "name": "Bradley Alex",
-        "nation": "Inglaterra",
-        "nation_code": "uk",
-        "played": "0",
-        "player_age": "18",
-        "reds": "0",
-        "team": "west brom",
-        "yellows": "0"
-      },
-      {
-        "goals": "0",
         "j_number": "11",
         "name": "Brunt Chris",
         "nation": "Irlanda del Norte",
@@ -7056,18 +7008,6 @@
         "reds": "0",
         "team": "west brom",
         "yellows": "1"
-      },
-      {
-        "goals": "0",
-        "j_number": "4",
-        "name": "Chambers Jack",
-        "nation": "Irlanda del Norte",
-        "nation_code": "uk",
-        "played": "0",
-        "player_age": "17",
-        "reds": "0",
-        "team": "west brom",
-        "yellows": "0"
       },
       {
         "goals": "0",
@@ -7112,7 +7052,7 @@
         "nation": "Polonia",
         "nation_code": "pl",
         "played": "17",
-        "player_age": "27",
+        "player_age": "28",
         "reds": "0",
         "team": "west brom",
         "yellows": "2"
@@ -7290,18 +7230,6 @@
       {
         "goals": "0",
         "j_number": "2",
-        "name": "Meredith Dan",
-        "nation": "Escocia",
-        "nation_code": "",
-        "played": "0",
-        "player_age": "18",
-        "reds": "0",
-        "team": "west brom",
-        "yellows": "0"
-      },
-      {
-        "goals": "0",
-        "j_number": "2",
         "name": "Nyom Allan",
         "nation": "Camerún",
         "nation_code": "cm",
@@ -7315,24 +7243,24 @@
     "delanteros": [
       {
         "goals": "0",
-        "j_number": "23",
-        "name": "Donnellan Shaun",
-        "nation": "Irlanda",
-        "nation_code": "ie",
-        "played": "0",
-        "player_age": "20",
-        "reds": "0",
-        "team": "west brom",
-        "yellows": "0"
-      },
-      {
-        "goals": "0",
         "j_number": "45",
         "name": "Leko Jonathan",
         "nation": "Inglaterra",
         "nation_code": "uk",
         "played": "0",
         "player_age": "18",
+        "reds": "0",
+        "team": "west brom",
+        "yellows": "0"
+      },
+      {
+        "goals": "0",
+        "j_number": "18",
+        "name": "Roberts Tyler",
+        "nation": "Gales",
+        "nation_code": "",
+        "played": "0",
+        "player_age": "19",
         "reds": "0",
         "team": "west brom",
         "yellows": "0"
@@ -7388,18 +7316,6 @@
         "reds": "0",
         "team": "west brom",
         "yellows": "2"
-      },
-      {
-        "goals": "0",
-        "j_number": "13",
-        "name": "Keranovic Jasmin",
-        "nation": "Australia",
-        "nation_code": "au",
-        "played": "0",
-        "player_age": "19",
-        "reds": "0",
-        "team": "west brom",
-        "yellows": "0"
       },
       {
         "goals": "0",
@@ -7479,6 +7395,18 @@
       },
       {
         "goals": "0",
+        "j_number": "55",
+        "name": "Diangana Grady",
+        "nation": "Inglaterra",
+        "nation_code": "uk",
+        "played": "0",
+        "player_age": "19",
+        "reds": "0",
+        "team": "west ham",
+        "yellows": "0"
+      },
+      {
+        "goals": "0",
         "j_number": "31",
         "name": "Fernandes Edimilson",
         "nation": "Suiza",
@@ -7538,6 +7466,18 @@
         "yellows": "0"
       },
       {
+        "goals": "0",
+        "j_number": "10",
+        "name": "Mario Joao",
+        "nation": "Portugal",
+        "nation_code": "pt",
+        "played": "0",
+        "player_age": "25",
+        "reds": "0",
+        "team": "west ham",
+        "yellows": "0"
+      },
+      {
         "goals": "2",
         "j_number": "16",
         "name": "Noble Mark",
@@ -7575,7 +7515,7 @@
       },
       {
         "goals": "0",
-        "j_number": "10",
+        "j_number": "36",
         "name": "Quina Domingos",
         "nation": "Portugal",
         "nation_code": "pt",

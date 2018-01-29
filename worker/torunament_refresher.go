@@ -27,3 +27,4 @@ func RefreshPremierLeague() {
 
 	fmt.Printf("Writing %d bytes", n)
 }
+

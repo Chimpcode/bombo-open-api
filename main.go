@@ -1,23 +1,31 @@
 package main
 
 import (
-	"github.com/kataras/iris"
-	"./server"
-	"./worker"
-	"github.com/iris-contrib/middleware/cors"
+	"fmt"
+	"./scraper"
+
 )
 
+
 func main() {
-	app := iris.Default()
-	worker.RefreshPremierLeague()
-	crs := cors.New(cors.Options{
-		AllowedOrigins:   []string{"*"}, // allows everything, use that to change the hosts.
-		AllowCredentials: true,
-	})
+	//app := iris.Default()
+	//worker.RefreshPremierLeague()
+	//crs := cors.New(cors.Options{
+	//	AllowedOrigins:   []string{"*"}, // allows everything, use that to change the hosts.
+	//	AllowCredentials: true,
+	//})
+	//
+	//api := app.Party("/api/v1")
+	//api.Use(crs)
+	//server.LinkApi(api)
+	//
+	//app.Run(iris.Addr(":9800"))
 
-	api := app.Party("/api/v1")
-	api.Use(crs)
-	server.LinkApi(api)
+	data, err := scraper.GetScoreFromMatch(scraper.ExampleMatch)
+	if err != nil {
+		panic(err.Error())
+	}
+	fmt.Println(data)
 
-	app.Run(iris.Addr(":9800"))
 }
+
