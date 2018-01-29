@@ -2,10 +2,9 @@ package main
 
 import (
 	"fmt"
+
 	"./scraper"
-
 )
-
 
 func main() {
 	//app := iris.Default()
@@ -21,11 +20,10 @@ func main() {
 	//
 	//app.Run(iris.Addr(":9800"))
 
-	data, err := scraper.GetScoreFromMatch(scraper.ExampleMatch)
+	data, err := scraper.GetEventsFromMatch(scraper.ExampleMatch)
 	if err != nil {
 		panic(err.Error())
 	}
 	fmt.Println(data)
 
 }
-
