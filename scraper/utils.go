@@ -3,13 +3,20 @@ package scraper
 import "strings"
 
 func GetIdFromMatchUrl(urlMatch string) string {
-	fixedUrl := ""
+	fixedURL := ""
 	if strings.HasSuffix(urlMatch, "/") {
-		fixedUrl = urlMatch[0 : len(urlMatch)-2]
+		fixedURL = urlMatch[0 : len(urlMatch)-2]
 	} else {
-		fixedUrl = urlMatch
+		fixedURL = urlMatch
 	}
 
-	chunks := strings.Split(fixedUrl, "/")
+	chunks := strings.Split(fixedURL, "/")
 	return chunks[len(chunks)-1]
+}
+
+func ParseToValidCamelCase(text string) string {
+	finalText := strings.ToLower(text)
+	finalText = strings.Replace(finalText, " ", "_", -1)
+	finalText = strings.Replace(finalText, "-", "_", -1)
+	return finalText
 }

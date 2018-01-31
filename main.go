@@ -1,9 +1,8 @@
 package main
 
 import (
-	"fmt"
-
 	"./scraper"
+	"github.com/k0kubun/pp"
 )
 
 func main() {
@@ -24,6 +23,6 @@ func main() {
 	if err != nil {
 		panic(err.Error())
 	}
-	fmt.Println(data)
+	pp.Println(data)
 
 }

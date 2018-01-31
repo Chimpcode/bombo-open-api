@@ -19,14 +19,14 @@ type Event struct {
 }
 
 type EventPlayer struct {
-	Name       string
-	Jersey     string
-	NationFlag string
+	Name   string
+	Jersey string
+	Nation string
 
 	Events []Event
 }
 
 type MatchEvents struct {
-	Home map[string]EventPlayer
-	Away map[string]EventPlayer
+	Home map[string][]EventPlayer
+	Away map[string][]EventPlayer
 }
