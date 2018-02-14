@@ -14,6 +14,10 @@ func RefreshPremierLeague() {
 	fmt.Println("Downloaded data in ", timeInto)
 	fmt.Println(data)
 
+	err = os.Mkdir("./data", os.ModeDir)
+	if err != nil {
+		panic(err.Error())
+	}
 	file, err := os.Create("./data/premier_league.json")
 	if err != nil {
 		panic(err.Error())
