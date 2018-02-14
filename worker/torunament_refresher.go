@@ -1,9 +1,9 @@
 package worker
 
 import (
-	"../scraper"
 	"fmt"
 	"os"
+	"github.com/Chimpcode/bombo-open-api/scraper"
 )
 
 func RefreshPremierLeague() {
