@@ -3,84 +3,91 @@ package scraper
 import (
 	"github.com/anaskhan96/soup"
 	"strings"
-	"encoding/json"
 	"log"
 	"time"
+	"strconv"
 )
 
-func GetFullTeamsInfo(tournamentUrl string, verbose bool) ([]byte, time.Duration, error) {
+func GetFullTeamsInfo(tournamentUrl string, verbose bool) (map[string]*Team, time.Duration, error) {
 	t0 := time.Now()
 
 	resp, err := soup.Get(tournamentUrl)
 	if err != nil {
-		return []byte{}, time.Now().Sub(t0), err
+		return map[string]*Team{}, time.Now().Sub(t0), err
 	}
 	doc := soup.HTMLParse(resp)
 
 	participants := doc.Find("div", "id", "tournament-page-participants")
 	body := participants.Find("table").Find("tbody")
 
-	participants_data := map[string]map[string][]map[string]string{}
-	team_name := ""
+	participantsData := make(map[string]*Team)
+	teamName := ""
+
+	currentTeam := new(Team)
 	for _, p := range body.FindAll("tr") {
-		p_link := p.Find("a")
-		team_name = strings.ToLower(p_link.Text())
+		pLink := p.Find("a")
+		teamName = strings.ToLower(pLink.Text())
 		if verbose {
-			log.Println(team_name)
+			log.Println(teamName)
 		}
-		team_url := BaseScoreBoard + p_link.Attrs()["href"]
-		plan := team_url + "/plantilla"
+		teamUrl := BaseScoreBoard + pLink.Attrs()["href"]
+		plan := teamUrl + "/plantilla"
 
 		r, err := soup.Get(plan)
 		if err != nil {
-			return []byte{}, time.Now().Sub(t0), err
+			return map[string]*Team{}, time.Now().Sub(t0), err
 		}
-		plan_soup := soup.HTMLParse(r)
-		player_table := plan_soup.Find("table", "class", "base-table squad-table")
+		planSoup := soup.HTMLParse(r)
+		playerTable := planSoup.Find("table", "class", "base-table squad-table")
 		field := ""
-		players := map[string][]map[string]string{}
 
-		for _, row := range  player_table.Find("tbody").FindAll("tr") {
 
-			jersey_number := ""
+
+		for _, row := range  playerTable.Find("tbody").FindAll("tr") {
+
+			jerseyNumber := 0
 			name := ""
 			nation := ""
-			player_age := ""
+			playerAge := 0
 			played := ""
-			goals := ""
-			yellows := ""
-			reds := ""
+			goals := 0
+			yellows := 0
+			reds := 0
 
 
 			innerClass := row.Attrs()["class"]
 			if strings.Contains(innerClass, "player-type-title") {
 				field = strings.ToLower(row.Find("td").Text())
-				players[field]= []map[string]string{}
 			} else {
 				for i, td := range row.FindAll("td") {
 					if  td.Pointer.FirstChild != nil {
 						switch i {
 						case 0:
-							jersey_number = td.Text()
+							jerseyNumberS := td.Text()
+							jerseyNumber, _ = strconv.Atoi(jerseyNumberS)
 							break
 						case 1:
 							name = td.Find("a").Text()
 							nation = td.Find("span").Attrs()["title"]
 							break
 						case 2:
-							player_age = td.Text()
+							playerAgeS := td.Text()
+							playerAge, _ = strconv.Atoi(playerAgeS)
 							break
 						case 3:
 							played = td.Text()
 							break
 						case 4:
-							goals = td.Text()
+							goalsS := td.Text()
+							goals, _ = strconv.Atoi(goalsS)
 							break
 						case 5:
-							yellows = td.Text()
+							yellowsS := td.Text()
+							yellows, _ = strconv.Atoi(yellowsS)
 							break
 						case 6:
-							reds = td.Text()
+							redsS := td.Text()
+							reds, _ = strconv.Atoi(redsS)
 							break
 						default:
 							break
@@ -94,26 +101,41 @@ func GetFullTeamsInfo(tournamentUrl string, verbose bool) ([]byte, time.Duration
 				} else {
 					nCode = ""
 				}
-				meta_data := map[string]string{
-					"j_number": jersey_number,
-					"name": name,
-					"nation": nation,
-					"nation_code": nCode,
-					"player_age": player_age,
-					"played": played,
-					"goals": goals,
-					"yellows": yellows,
-					"team": team_name,
-					"reds": reds,
+
+				p := &Player{
+					Name: name,
+					JNumber: jerseyNumber,
+					Nation: nation,
+					NationCode: nCode,
+					Age: playerAge,
+					Played: played,
+					Goals: goals,
+					Yellows: yellows,
+					Reds: reds,
+					Team: teamName,
+					Cost: 0,
+
 				}
-				players[field] = append(players[field], meta_data)
+
+				switch field {
+				case "centrocampistas":
+					currentTeam.MidFielder = append(currentTeam.MidFielder, p)
+				case "defensas":
+					currentTeam.Defender = append(currentTeam.Defender, p)
+				case "delanteros":
+					currentTeam.Forwarder = append(currentTeam.Forwarder, p)
+				case "entrenador":
+					currentTeam.Coach = p
+				case "porteros":
+					currentTeam.GolKeeper = append(currentTeam.GolKeeper, p)
+
+				}
+
 			}
 		}
-		participants_data[team_name] = players
+		participantsData[teamName] = currentTeam
 	}
 
-	data, err := json.MarshalIndent(participants_data, "", "  ")
-
 	t1 := time.Now()
-	return data, t1.Sub(t0), err
+	return participantsData, t1.Sub(t0), err
 }
