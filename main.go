@@ -2,6 +2,7 @@ package main
 
 import (
 	"./scraper"
+	"github.com/k0kubun/pp"
 )
 
 func main() {
@@ -24,10 +25,9 @@ func main() {
 	//}
 	//pp.Println(data)
 
-	teams, _, _:= scraper.GetFullTeamsInfo("https://www.scoreboard.com/es/futbol/inglaterra/premier-league/equipos", true)
-	CreateCSVFromStruct(teams)
+	teams, _:= scraper.GetFullTeamsInfo("https://www.scoreboard.com/es/futbol/inglaterra/premier-league/equipos", true)
 
-
+	pp.Println(teams)
 	//manager := NewWorkManager()
 	//work := NewWork(
 	//	"https://www.scoreboard.com/es/futbol/inglaterra/premier-league/equipos",

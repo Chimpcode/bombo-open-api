@@ -12,6 +12,8 @@ type Player struct {
 	Reds       int    `json:"reds"`
 	Team       string `json:"team"`
 	Cost       int    `json:"cost"`
+
+	InternalID string `json:"internal_id"`
 }
 
 type Coach struct {
@@ -20,6 +22,8 @@ type Coach struct {
 	NationCode string `json:"nation_code"`
 	Age        int    `json:"age"`
 	Team       string `json:"team"`
+
+	InternalID string `json:"internal_id"`
 }
 
 type Team struct {
@@ -29,4 +33,8 @@ type Team struct {
 	Defender   []*Player `json:"defender"`
 	Forwarder  []*Player `json:"forwarder"`
 	Coach      *Player   `json:"coach"`
+
+	InternalID string `json:"internal_id"`
 }
+
+type League []*Team

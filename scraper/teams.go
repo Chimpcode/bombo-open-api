@@ -1,66 +1,59 @@
 package scraper
 
 import (
-	"github.com/anaskhan96/soup"
-	"strings"
+	"github.com/gocolly/colly"
+	"github.com/PuerkitoBio/goquery"
 	"log"
-	"time"
 	"strconv"
+	"strings"
 )
 
-func GetFullTeamsInfo(tournamentUrl string, verbose bool) (map[string]*Team, time.Duration, error) {
-	t0 := time.Now()
+func GetFullTeamsInfo(tournamentUrl string, verbose bool) (*League, error) {
 
-	resp, err := soup.Get(tournamentUrl)
-	if err != nil {
-		return map[string]*Team{}, time.Now().Sub(t0), err
-	}
-	doc := soup.HTMLParse(resp)
+	log.Println("I'm inside")
 
-	participants := doc.Find("div", "id", "tournament-page-participants")
-	body := participants.Find("table").Find("tbody")
+	finalLeague := League{}
 
-	participantsData := make(map[string]*Team)
-	teamName := ""
+	c := colly.NewCollector()
 
-	currentTeam := new(Team)
-	for _, p := range body.FindAll("tr") {
-		pLink := p.Find("a")
-		teamName = strings.ToLower(pLink.Text())
-		if verbose {
-			log.Println(teamName)
-		}
-		teamUrl := BaseScoreBoard + pLink.Attrs()["href"]
-		plan := teamUrl + "/plantilla"
 
-		r, err := soup.Get(plan)
-		if err != nil {
-			return map[string]*Team{}, time.Now().Sub(t0), err
-		}
-		planSoup := soup.HTMLParse(r)
-		playerTable := planSoup.Find("table", "class", "base-table squad-table")
+	c.OnHTML("div#tournament-page-participants", func(e *colly.HTMLElement) {
+		log.Println("I'm here!")
+		e.DOM.Find("tr").Each(func(i int, s *goquery.Selection) {
+			href, exist := s.Find("a").First().Attr("href")
+			if exist {
+				teamP := BaseScoreBoard + href + "/plantilla"
+				log.Println("Visting: ", teamP)
+				c.Visit(teamP)
+			}
+		})
+	})
+
+	c.OnHTML("div.main", func(e *colly.HTMLElement) {
+		log.Println("I'm here! x22")
+
+		teamName := e.DOM.Find("div.team-name").First().Text()
+		log.Println(teamName)
+
 		field := ""
 
+		team := new(Team)
 
-
-		for _, row := range  playerTable.Find("tbody").FindAll("tr") {
-
-			jerseyNumber := 0
-			name := ""
-			nation := ""
-			playerAge := 0
-			played := ""
-			goals := 0
-			yellows := 0
-			reds := 0
-
-
-			innerClass := row.Attrs()["class"]
-			if strings.Contains(innerClass, "player-type-title") {
-				field = strings.ToLower(row.Find("td").Text())
-			} else {
-				for i, td := range row.FindAll("td") {
-					if  td.Pointer.FirstChild != nil {
+		e.DOM.Find("div#block-summary-squad >tbody>tr").Each(func(i int, s *goquery.Selection) {
+			if s.HasClass("player-type-title") {
+				log.Println(field)
+				field, _ = s.Attr("class")
+			}else{
+				jerseyNumber := 0
+				name := ""
+				nation := ""
+				playerAge := 0
+				played := ""
+				goals := 0
+				yellows := 0
+				reds := 0
+				s.Find("td").Each(func(j int, td *goquery.Selection) {
+					if  td.First() != nil {
 						switch i {
 						case 0:
 							jerseyNumberS := td.Text()
@@ -68,7 +61,7 @@ func GetFullTeamsInfo(tournamentUrl string, verbose bool) (map[string]*Team, tim
 							break
 						case 1:
 							name = td.Find("a").Text()
-							nation = td.Find("span").Attrs()["title"]
+							nation, _ = td.Find("span").Attr("title")
 							break
 						case 2:
 							playerAgeS := td.Text()
@@ -93,7 +86,8 @@ func GetFullTeamsInfo(tournamentUrl string, verbose bool) (map[string]*Team, tim
 							break
 						}
 					}
-				}
+				})
+
 				nCode := ""
 				nationCodes := strings.Split(NationsCode[nation], "_")
 				if len(nationCodes) > 1 {
@@ -119,23 +113,26 @@ func GetFullTeamsInfo(tournamentUrl string, verbose bool) (map[string]*Team, tim
 
 				switch field {
 				case "centrocampistas":
-					currentTeam.MidFielder = append(currentTeam.MidFielder, p)
+					team.MidFielder = append(team.MidFielder, p)
 				case "defensas":
-					currentTeam.Defender = append(currentTeam.Defender, p)
+					team.Defender = append(team.Defender, p)
 				case "delanteros":
-					currentTeam.Forwarder = append(currentTeam.Forwarder, p)
+					team.Forwarder = append(team.Forwarder, p)
 				case "entrenador":
-					currentTeam.Coach = p
+					team.Coach = p
 				case "porteros":
-					currentTeam.GolKeeper = append(currentTeam.GolKeeper, p)
+					team.GolKeeper = append(team.GolKeeper, p)
 
 				}
 
 			}
-		}
-		participantsData[teamName] = currentTeam
-	}
+		})
+		team.Name = teamName
 
-	t1 := time.Now()
-	return participantsData, t1.Sub(t0), err
+		finalLeague = append(finalLeague, team)
+	})
+
+	c.Visit(tournamentUrl)
+
+	return &finalLeague, nil
 }

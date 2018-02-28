@@ -45,7 +45,7 @@ func SaveDataForMatchWork(w *Work) error {
 }
 
 func SaveDataForLeagueWork(w *Work) error {
-	teams, _, err := scraper.GetFullTeamsInfo(w.URL, true)
+	teams, err := scraper.GetFullTeamsInfo(w.URL, true)
 	if err != nil {
 		return err
 	}
