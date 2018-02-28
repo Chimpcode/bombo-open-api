@@ -3,7 +3,7 @@ package main
 import (
 	"time"
 	"log"
-	"github.com/k0kubun/pp"
+	//"github.com/k0kubun/pp"
 	"io/ioutil"
 	"encoding/json"
 	"os"
@@ -90,7 +90,7 @@ func (manager *WorkManager) Run(step time.Duration) {
 
 				}
 			}
-			pp.Println(manager.WorksUpdating)
+			//pp.Println(manager.WorksUpdating)
 
 		}
 	}()
