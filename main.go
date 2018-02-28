@@ -26,6 +26,7 @@ func main() {
 	api := app.Party("/api/v1.0/")
 
 	LinkApi(api, manager)
+	app.Logger().SetLevel("debug")
 
 	app.Run(iris.Addr(":8500"))
 }

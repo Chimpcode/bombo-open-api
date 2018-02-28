@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c25f92a3-84aa-4690-b2c0-d494383400a8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/premier_league.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager.go" beforeDir="false" afterPath="$PROJECT_DIR$/manager.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/apiv1.go" beforeDir="false" afterPath="$PROJECT_DIR$/apiv1.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/state/manager_state.json" beforeDir="false" afterPath="$PROJECT_DIR$/state/manager_state.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work.go" beforeDir="false" afterPath="$PROJECT_DIR$/work.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worker.go" beforeDir="false" afterPath="$PROJECT_DIR$/worker.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+            <state relative-caret-position="204">
+              <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
               <folding>
                 <element signature="e#14#32#0" expanded="true" />
               </folding>
@@ -82,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apiv1.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="apiv1.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apiv1.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -330,7 +323,8 @@
     <MESSAGE value="Fixed and created util structs" />
     <MESSAGE value="Upgrading team collector" />
     <MESSAGE value="All using colly and manager work with state saving " />
-    <option name="LAST_COMMIT_MESSAGE" value="All using colly and manager work with state saving " />
+    <MESSAGE value="Ready for the demo!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ready for the demo!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -624,20 +618,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-          <folding>
-            <element signature="e#14#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apiv1.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="e#14#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
