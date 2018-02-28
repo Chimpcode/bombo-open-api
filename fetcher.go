@@ -1,11 +1,11 @@
 package main
 
 import (
-	"./scraper"
 	"os"
 	"encoding/json"
 	"strings"
 	"log"
+	"github.com/Chimpcode/bombo-open-api/scraper"
 )
 
 func init() {
