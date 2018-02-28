@@ -6,9 +6,43 @@ import (
 	"log"
 	"strconv"
 	"strings"
+	"io/ioutil"
 )
 
-func GetFullTeamsInfo(tournamentUrl string, verbose bool) (*League, error) {
+const costsFile = "./files/league_csv.csv"
+var leagueCosts = map[string]float64{}
+
+func init() {
+	leagueCosts = make(map[string]float64)
+
+	data, err := ioutil.ReadFile(costsFile)
+
+	if err != nil {
+		panic(err)
+	}
+
+	lines := strings.Split(string(data), "\n")
+	for _, line := range lines {
+
+		line = strings.Trim(line, "\r")
+		chunks := strings.Split(line, ",")
+		if len(chunks) > 2 {
+			stringCost := chunks[2]
+			cost, err := strconv.ParseFloat(stringCost, 64)
+			if err != nil {
+				continue
+			}
+			leagueCosts[chunks[0]] = cost
+		}else{
+			continue
+		}
+
+	}
+
+	log.Println("Players costs loaded!")
+}
+
+func GetFullTeamsInfo(tournamentUrl string, verbose bool) (League, error) {
 
 	log.Println("I'm inside")
 
@@ -18,7 +52,6 @@ func GetFullTeamsInfo(tournamentUrl string, verbose bool) (*League, error) {
 
 
 	c.OnHTML("div#tournament-page-participants", func(e *colly.HTMLElement) {
-		log.Println("I'm here!")
 		e.DOM.Find("tr").Each(func(i int, s *goquery.Selection) {
 			href, exist := s.Find("a").First().Attr("href")
 			if exist {
@@ -30,19 +63,20 @@ func GetFullTeamsInfo(tournamentUrl string, verbose bool) (*League, error) {
 	})
 
 	c.OnHTML("div.main", func(e *colly.HTMLElement) {
-		log.Println("I'm here! x22")
 
 		teamName := e.DOM.Find("div.team-name").First().Text()
-		log.Println(teamName)
 
 		field := ""
 
 		team := new(Team)
 
-		e.DOM.Find("div#block-summary-squad >tbody>tr").Each(func(i int, s *goquery.Selection) {
+		columns :=e.DOM.Find("table.base-table").First().Find("tbody").Find("tr")
+
+
+		columns.Each(func(i int, s *goquery.Selection) {
 			if s.HasClass("player-type-title") {
-				log.Println(field)
-				field, _ = s.Attr("class")
+				f := s.Find("td").First().Text()
+				field = strings.ToLower(f)
 			}else{
 				jerseyNumber := 0
 				name := ""
@@ -53,10 +87,12 @@ func GetFullTeamsInfo(tournamentUrl string, verbose bool) (*League, error) {
 				yellows := 0
 				reds := 0
 				s.Find("td").Each(func(j int, td *goquery.Selection) {
+
 					if  td.First() != nil {
-						switch i {
+						switch j {
 						case 0:
 							jerseyNumberS := td.Text()
+
 							jerseyNumber, _ = strconv.Atoi(jerseyNumberS)
 							break
 						case 1:
@@ -88,6 +124,8 @@ func GetFullTeamsInfo(tournamentUrl string, verbose bool) (*League, error) {
 					}
 				})
 
+
+
 				nCode := ""
 				nationCodes := strings.Split(NationsCode[nation], "_")
 				if len(nationCodes) > 1 {
@@ -107,10 +145,9 @@ func GetFullTeamsInfo(tournamentUrl string, verbose bool) (*League, error) {
 					Yellows: yellows,
 					Reds: reds,
 					Team: teamName,
-					Cost: 0,
+					Cost: leagueCosts[name],
 
 				}
-
 				switch field {
 				case "centrocampistas":
 					team.MidFielder = append(team.MidFielder, p)
@@ -134,5 +171,5 @@ func GetFullTeamsInfo(tournamentUrl string, verbose bool) (*League, error) {
 
 	c.Visit(tournamentUrl)
 
-	return &finalLeague, nil
+	return finalLeague[:len(finalLeague)-1], nil
 }

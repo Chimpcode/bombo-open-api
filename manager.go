@@ -4,12 +4,52 @@ import (
 	"time"
 	"log"
 	"github.com/k0kubun/pp"
+	"io/ioutil"
+	"encoding/json"
+	"os"
 )
 
 type WorkManager struct {
 	Works []*Work `json:"works"`
 	WorksUpdating []*Work `json:"works_updating"`
 
+}
+
+
+func LoadManagerFromFile (filePath string) (*WorkManager, error) {
+	data, err := ioutil.ReadFile(filePath)
+	if err != nil {
+		return &WorkManager{}, err
+	}
+
+	wm := new(WorkManager)
+
+	err = json.Unmarshal(data, wm)
+	if err != nil {
+		return &WorkManager{}, err
+	}
+	return wm, nil
+}
+
+func SaveWorkManagerState(wm *WorkManager) error {
+	data, err := json.Marshal(wm)
+	if err != nil {
+		return err
+	}
+
+	file, err := os.Create("./state/manager_state.json")
+	if err != nil {
+		return err
+	}
+
+	defer file.Close()
+
+	_, err = file.Write(data)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 func NewWorkManager() *WorkManager {

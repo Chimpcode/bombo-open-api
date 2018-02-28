@@ -11,7 +11,7 @@ type Player struct {
 	Yellows    int    `json:"yellows"`
 	Reds       int    `json:"reds"`
 	Team       string `json:"team"`
-	Cost       int    `json:"cost"`
+	Cost       float64    `json:"cost"`
 
 	InternalID string `json:"internal_id"`
 }
