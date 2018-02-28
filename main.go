@@ -2,47 +2,31 @@ package main
 
 import (
 	"time"
+	"github.com/kataras/iris"
+	"github.com/iris-contrib/middleware/cors"
 )
 
 func main() {
 
-
-	//
-	//app := iris.Default()
-	//crs := cors.New(cors.Options{
-	//	AllowedOrigins:   []string{"*"}, // allows everything, use that to change the hosts.
-	//	AllowCredentials: true,
-	//})
-
-	manager := NewWorkManager()
-	work := NewWork(
-		"https://www.scoreboard.com/es/futbol/inglaterra/premier-league/equipos",
-		"premier_league",
-		WorkLeagueType,
-		60*time.Minute,
-	)
-
-	workMatch := NewWork(
-		"https://www.scoreboard.com/es/partido/eibar-malaga-cf-2017-2018/Amqd6uGr",
-		"premier_league",
-		WorkMatchType,
-		5*time.Minute,
-	)
-
-	manager.AddWork(work)
-	manager.AddWork(workMatch)
-
-	err := SaveWorkManagerState(manager)
+	manager, err:= LoadManagerFromFile("./state/manager_state.json")
 	if err != nil {
 		panic(err)
 	}
-	//manager.Run(1*time.Second)
-	//
-	//for {
-	//	h, m, s := time.Now().Clock()
-	//	fmt.Printf("%d:%d:%d\n", h, m, s)
-	//	time.Sleep(1 * time.Second)
-	//}
 
+	manager.Run(1*time.Second)
 
+	app := iris.Default()
+	crs := cors.New(cors.Options{
+		AllowedOrigins:   []string{"*"}, // allows everything, use that to change the hosts.
+		AllowCredentials: true,
+	})
+
+	app.Use(crs)
+
+	api := app.Party("/api/v1.0/")
+
+	LinkApi(api, manager)
+
+	app.Run(iris.Addr(":8500"))
 }
+

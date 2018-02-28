@@ -95,16 +95,6 @@ func (manager *WorkManager) Run(step time.Duration) {
 		}
 	}()
 
-	//go func() {
-	//	for {
-	//		time.Sleep(step)
-	//
-	//
-	//
-	//	}
-	//
-	//}()
-
 }
 
 

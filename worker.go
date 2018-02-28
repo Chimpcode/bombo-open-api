@@ -2,7 +2,7 @@ package main
 
 import "time"
 
-func NewWork(url string, name string, typeOfWork int, period time.Duration) *Work {
+func NewWork(url string, name string, typeOfWork string, period time.Duration) *Work {
 	return &Work{
 		URL: url,
 		Name: name,
