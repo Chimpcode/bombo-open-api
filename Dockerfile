@@ -1,6 +1,7 @@
 FROM golang:alpine
 RUN apk add --no-cache git mercurial
 ADD . /go/src/github.com/Chimpcode/bombo-open-api
+ADD . /go/src/github.com/Chimpcode/bombo-open-api/files
 
 RUN go get github.com/PuerkitoBio/goquery
 RUN go get github.com/anaskhan96/soup

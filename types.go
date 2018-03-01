@@ -28,13 +28,13 @@ type Coach struct {
 
 type Team struct {
 	Name       string    `json:"name"`
-	GolKeeper  []*Player `json:"gol_keeper"`
+	GoalKeeper []*Player `json:"goal_keeper"`
 	MidFielder []*Player `json:"mid_fielder"`
 	Defender   []*Player `json:"defender"`
-	Forwarder  []*Player `json:"forwarder"`
+	Forward    []*Player `json:"forward"`
 	Coach      *Player   `json:"coach"`
 
-	InternalID string `json:"internal_id"`
+	InternalID string    `json:"internal_id"`
 }
 
 type League []*Team
