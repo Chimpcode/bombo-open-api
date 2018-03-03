@@ -202,6 +202,11 @@ func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
 		pp.Println("(MATCH) Visiting", r.URL.String())
 	})
 
+	c.OnResponse(func(r *colly.Response) {
+		pp.Println(r.Headers)
+		pp.Println(r.StatusCode)
+	})
+
 	c.OnError(func(r *colly.Response, err error) {
 		log.Println("Request URL:", r.Request.URL, "failed with response:", r, "\nError:", err)
 	})
