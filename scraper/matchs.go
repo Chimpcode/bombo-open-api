@@ -73,6 +73,7 @@ func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
 
 	// Only lineups
 	c.OnHTML("div.lineups-wrapper > table.parts > tbody", func(e *colly.HTMLElement) {
+		pp.Println("INTO DIV.LINE...")
 		typeOfEvent := ""
 
 		lEventsPlayer := make([]EventPlayer, 0)
@@ -199,6 +200,7 @@ func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
 
 	err := c.Post(finalURL, map[string]string{})
 	if err != nil {
+		log.Println("c.Post(finalURL, map[string]string{}) ", err)
 		return finalEvents, err
 	}
 
