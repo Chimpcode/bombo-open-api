@@ -8,7 +8,15 @@
 					"name": "Capoue E.",
 					"jersey": "29",
 					"nation": "Francia",
-					"events": []
+					"events": [
+						{
+							"type": "y-card",
+							"count": 0,
+							"metadata": "25' Capoue E.",
+							"at": "25'",
+							"extras": null
+						}
+					]
 				},
 				{
 					"name": "Carrillo A.",

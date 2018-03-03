@@ -10,7 +10,35 @@ import (
 )
 
 func LinkApi(api iris.Party, manager *WorkManager) {
+	api.Get("/get-endpoints", func(c iris.Context) {
+		type MiniWork struct {
+			Name string `json:"name"`
+			URL string `json:"url"`
+			Type string `json:"type"`
+			Endpoint string `json:"endpoint"`
+		}
 
+		miniWorks := make([]MiniWork, 0)
+
+		for _, w := range manager.Works {
+			if w.Type == "match" {
+				mw := MiniWork{
+					Name: w.Name,
+					URL: w.URL,
+					Type: w.Type,
+					Endpoint: "/api/v1.0/" + w.Name,
+				}
+				miniWorks = append(miniWorks, mw)
+			}
+		}
+
+		c.StatusCode(iris.StatusOK)
+		c.JSON(iris.Map{
+			"data": miniWorks,
+			"error": nil,
+		})
+
+	})
 	api.Get("/{endpoint: string}", func(c iris.Context) {
 		endpoint := c.Params().Get("endpoint")
 		pp.Println(endpoint)

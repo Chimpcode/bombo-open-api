@@ -70,7 +70,15 @@
 					"name": "Son Heung-Min",
 					"jersey": "7",
 					"nation": "Corea del Sur",
-					"events": []
+					"events": [
+						{
+							"type": "soccer-ball",
+							"count": 0,
+							"metadata": "27' Son Heung-Min (Alli D.)",
+							"at": "27'",
+							"extras": null
+						}
+					]
 				},
 				{
 					"name": "Vertonghen J.",

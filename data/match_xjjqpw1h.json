@@ -76,7 +76,15 @@
 					"name": "van der Hoorn M.",
 					"jersey": "5",
 					"nation": "Holanda",
-					"events": []
+					"events": [
+						{
+							"type": "soccer-ball",
+							"count": 0,
+							"metadata": "32' van der Hoorn M. (Ki Sung-Yong)",
+							"at": "32'",
+							"extras": null
+						}
+					]
 				}
 			],
 			"suplentes": [
@@ -182,7 +190,15 @@
 					"name": "Reid W.",
 					"jersey": "2",
 					"nation": "Nueva Zelanda",
-					"events": []
+					"events": [
+						{
+							"type": "substitution-out",
+							"count": 0,
+							"metadata": "27' Reid W. (Byram S.)",
+							"at": "27'",
+							"extras": null
+						}
+					]
 				},
 				{
 					"name": "Rice D.",
@@ -214,7 +230,15 @@
 					"name": "Byram S.",
 					"jersey": "22",
 					"nation": "Inglaterra",
-					"events": []
+					"events": [
+						{
+							"type": "substitution-in",
+							"count": 0,
+							"metadata": "27'",
+							"at": "27'",
+							"extras": null
+						}
+					]
 				},
 				{
 					"name": "Cullen J.",
