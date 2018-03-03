@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"strings"
 	"log"
-	"github.com/Chimpcode/bombo-open-api/scraper"
+	"./scraper"
 )
 
 func init() {
