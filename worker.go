@@ -1,6 +1,9 @@
 package main
 
-import "time"
+import (
+	"time"
+	"github.com/k0kubun/pp"
+)
 
 func NewWork(url string, name string, typeOfWork string, period time.Duration) *Work {
 	return &Work{
@@ -22,8 +25,10 @@ func (w *Work) Update() {
 
 		switch w.Type {
 		case WorkMatchType:
+			pp.Println("UPDATING MATCH!!!")
 			err := SaveDataForMatchWork(w)
 			if err != nil {
+				pp.Println(err)
 				w.LastError = err
 				break
 			}
