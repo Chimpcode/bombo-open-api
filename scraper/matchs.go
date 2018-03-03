@@ -9,7 +9,6 @@ import (
 	"github.com/PuerkitoBio/goquery"
 	"github.com/gocolly/colly"
 	"github.com/k0kubun/pp"
-	"fmt"
 )
 
 func GetScoreFromMatch(urlMatch string) (MatchScore, error) {
