@@ -212,6 +212,7 @@ func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
 	finalEvents.Home.Score = score.Home.Score
 	finalEvents.Away.Score = score.Away.Score
 
+	pp.Println(finalEvents)
 
 	return finalEvents, nil
 }
