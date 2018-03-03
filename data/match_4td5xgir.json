@@ -156,7 +156,15 @@
 					"name": "Diouf M.",
 					"jersey": "18",
 					"nation": "Senegal",
-					"events": []
+					"events": [
+						{
+							"type": "substitution-out",
+							"count": 0,
+							"metadata": "23' Diouf M. (Pieters E.)",
+							"at": "23'",
+							"extras": null
+						}
+					]
 				},
 				{
 					"name": "Martins Indi B.",
@@ -224,7 +232,15 @@
 					"name": "Pieters E.",
 					"jersey": "3",
 					"nation": "Holanda",
-					"events": []
+					"events": [
+						{
+							"type": "substitution-in",
+							"count": 0,
+							"metadata": "23'",
+							"at": "23'",
+							"extras": null
+						}
+					]
 				},
 				{
 					"name": "Shawcross R.",

@@ -14,7 +14,15 @@
 					"name": "Amartey D.",
 					"jersey": "18",
 					"nation": "Ghana",
-					"events": []
+					"events": [
+						{
+							"type": "substitution-out",
+							"count": 0,
+							"metadata": "20' Amartey D. (Chilwell B.)",
+							"at": "20'",
+							"extras": null
+						}
+					]
 				},
 				{
 					"name": "Fuchs Ch.",
@@ -76,7 +84,15 @@
 					"name": "Chilwell B.",
 					"jersey": "3",
 					"nation": "Inglaterra",
-					"events": []
+					"events": [
+						{
+							"type": "substitution-in",
+							"count": 0,
+							"metadata": "20'",
+							"at": "20'",
+							"extras": null
+						}
+					]
 				},
 				{
 					"name": "Diabate F.",

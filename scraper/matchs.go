@@ -65,7 +65,6 @@ func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
 	matchID := GetIdFromMatchUrl(urlMatch)
 	finalURL := InternalScoreBoardApi + "d_li_" + matchID + "_es_1"
 
-	pp.Println(finalURL)
 
 	finalEvents := MatchEvents{
 		Home: BaseMatchEvent{Events: map[string][]EventPlayer{}},
@@ -75,7 +74,6 @@ func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
 
 	// Only lineups
 	c.OnHTML("div.lineups-wrapper > table.parts > tbody", func(e *colly.HTMLElement) {
-		pp.Println("INTO DIV.LINE...")
 		typeOfEvent := ""
 
 		lEventsPlayer := make([]EventPlayer, 0)
@@ -201,15 +199,15 @@ func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
 	})
 
 	c.OnRequest(func(r *colly.Request) {
-		//r.Headers.Set("x-fsign", "vPAvOgxk")
-		pp.Println("(MATCH) Visiting", r.URL.String())
-		pp.Println("(MATCH) Visiting [HEADERS]", r.Headers)
-		pp.Println("(MATCH) Visiting [BODY]", r.Body)
+		////r.Headers.Set("x-fsign", "vPAvOgxk")
+		//pp.Println("(MATCH) Visiting", r.URL.String())
+		//pp.Println("(MATCH) Visiting [HEADERS]", r.Headers)
+		//pp.Println("(MATCH) Visiting [BODY]", r.Body)
 	})
 
 	c.OnResponse(func(r *colly.Response) {
-		pp.Println(r.StatusCode)
-		pp.Println(string(r.Body))
+		//pp.Println(r.StatusCode)
+		//pp.Println(string(r.Body))
 	})
 
 	c.OnError(func(r *colly.Response, err error) {
