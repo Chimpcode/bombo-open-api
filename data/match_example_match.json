@@ -1,4 +1,370 @@
 {
-	"Home": {},
-	"Away": {}
+	"Home": {
+		"alineaciones_iniciales": [
+			{
+				"Name": "Alejo I.",
+				"Jersey": "20",
+				"Nation": "España",
+				"Events": [
+					{
+						"Type": "substitution-out",
+						"Count": 0,
+						"Metadata": "56' Alejo I. (Orellana F.)",
+						"At": "56'",
+						"Extras": null
+					}
+				]
+			},
+			{
+				"Name": "Arbilla A.",
+				"Jersey": "18",
+				"Nation": "España",
+				"Events": []
+			},
+			{
+				"Name": "Capa A.",
+				"Jersey": "7",
+				"Nation": "España",
+				"Events": []
+			},
+			{
+				"Name": "Charles",
+				"Jersey": "19",
+				"Nation": "Brasil",
+				"Events": []
+			},
+			{
+				"Name": "Dmitrovic M. (G)",
+				"Jersey": "25",
+				"Nation": "Serbia",
+				"Events": []
+			},
+			{
+				"Name": "García D. (C)",
+				"Jersey": "14",
+				"Nation": "España",
+				"Events": []
+			},
+			{
+				"Name": "Inui T.",
+				"Jersey": "8",
+				"Nation": "Japón",
+				"Events": [
+					{
+						"Type": "substitution-out",
+						"Count": 0,
+						"Metadata": "72' Inui T. (Bebé)",
+						"At": "72'",
+						"Extras": null
+					}
+				]
+			},
+			{
+				"Name": "Jordán J.",
+				"Jersey": "24",
+				"Nation": "España",
+				"Events": []
+			},
+			{
+				"Name": "Kike",
+				"Jersey": "17",
+				"Nation": "España",
+				"Events": [
+					{
+						"Type": "soccer-ball",
+						"Count": 0,
+						"Metadata": "76' Kike (Bebé)",
+						"At": "76'",
+						"Extras": null
+					}
+				]
+			},
+			{
+				"Name": "Oliveira P.",
+				"Jersey": "12",
+				"Nation": "Portugal",
+				"Events": [
+					{
+						"Type": "substitution-out",
+						"Count": 0,
+						"Metadata": "51' Oliveira P. (Ramis I.)",
+						"At": "51'",
+						"Extras": null
+					}
+				]
+			},
+			{
+				"Name": "Cote",
+				"Jersey": "15",
+				"Nation": "España",
+				"Events": []
+			}
+		],
+		"suplentes": [
+			{
+				"Name": "Bebé",
+				"Jersey": "10",
+				"Nation": "Portugal",
+				"Events": [
+					{
+						"Type": "substitution-in",
+						"Count": 0,
+						"Metadata": "72'",
+						"At": "72'",
+						"Extras": null
+					}
+				]
+			},
+			{
+				"Name": "Diop P.",
+				"Jersey": "3",
+				"Nation": "Senegal",
+				"Events": []
+			},
+			{
+				"Name": "Escalante G.",
+				"Jersey": "5",
+				"Nation": "Argentina",
+				"Events": []
+			},
+			{
+				"Name": "Orellana F.",
+				"Jersey": "2",
+				"Nation": "Chile",
+				"Events": [
+					{
+						"Type": "substitution-in",
+						"Count": 0,
+						"Metadata": "56'",
+						"At": "56'",
+						"Extras": null
+					},
+					{
+						"Type": "y-card",
+						"Count": 1,
+						"Metadata": "89' Orellana F.",
+						"At": "89'",
+						"Extras": null
+					}
+				]
+			},
+			{
+				"Name": "Peña R.",
+				"Jersey": "11",
+				"Nation": "España",
+				"Events": []
+			},
+			{
+				"Name": "Ramis I.",
+				"Jersey": "4",
+				"Nation": "España",
+				"Events": [
+					{
+						"Type": "substitution-in",
+						"Count": 0,
+						"Metadata": "51'",
+						"At": "51'",
+						"Extras": null
+					}
+				]
+			},
+			{
+				"Name": "Riesgo A. (G)",
+				"Jersey": "13",
+				"Nation": "España",
+				"Events": []
+			}
+		]
+	},
+	"Away": {
+		"alineaciones_iniciales": [
+			{
+				"Name": "Adrián",
+				"Jersey": "8",
+				"Nation": "España",
+				"Events": []
+			},
+			{
+				"Name": "Castro C.",
+				"Jersey": "11",
+				"Nation": "Uruguay",
+				"Events": [
+					{
+						"Type": "substitution-out",
+						"Count": 0,
+						"Metadata": "80' Castro C. (Mula A.)",
+						"At": "80'",
+						"Extras": null
+					}
+				]
+			},
+			{
+				"Name": "En-Nesyri Y.",
+				"Jersey": "26",
+				"Nation": "Marruecos",
+				"Events": [
+					{
+						"Type": "soccer-ball",
+						"Count": 0,
+						"Metadata": "16' En-Nesyri Y. ",
+						"At": "16'",
+						"Extras": null
+					},
+					{
+						"Type": "substitution-out",
+						"Count": 1,
+						"Metadata": "60' En-Nesyri Y. (Bastón B.)",
+						"At": "60'",
+						"Extras": null
+					}
+				]
+			},
+			{
+				"Name": "Hernández L.",
+				"Jersey": "4",
+				"Nation": "España",
+				"Events": []
+			},
+			{
+				"Name": "Iturra M.",
+				"Jersey": "7",
+				"Nation": "Chile",
+				"Events": []
+			},
+			{
+				"Name": "Jiménez R. (G)",
+				"Jersey": "1",
+				"Nation": "España",
+				"Events": []
+			},
+			{
+				"Name": "Keko",
+				"Jersey": "20",
+				"Nation": "España",
+				"Events": []
+			},
+			{
+				"Name": "Miquel I.",
+				"Jersey": "2",
+				"Nation": "España",
+				"Events": []
+			},
+			{
+				"Name": "Recio (C)",
+				"Jersey": "14",
+				"Nation": "España",
+				"Events": [
+					{
+						"Type": "substitution-out",
+						"Count": 0,
+						"Metadata": "84' Recio (Kuzmanovic Z.)",
+						"At": "84'",
+						"Extras": null
+					}
+				]
+			},
+			{
+				"Name": "Ricca F.",
+				"Jersey": "15",
+				"Nation": "Uruguay",
+				"Events": [
+					{
+						"Type": "y-card",
+						"Count": 0,
+						"Metadata": "44' Ricca F.",
+						"At": "44'",
+						"Extras": null
+					}
+				]
+			},
+			{
+				"Name": "Rosales R.",
+				"Jersey": "18",
+				"Nation": "Venezuela",
+				"Events": []
+			}
+		],
+		"suplentes": [
+			{
+				"Name": "Juanpi",
+				"Jersey": "10",
+				"Nation": "Venezuela",
+				"Events": []
+			},
+			{
+				"Name": "Bastón B.",
+				"Jersey": "9",
+				"Nation": "España",
+				"Events": [
+					{
+						"Type": "substitution-in",
+						"Count": 0,
+						"Metadata": "60'",
+						"At": "60'",
+						"Extras": null
+					}
+				]
+			},
+			{
+				"Name": "Bueno",
+				"Jersey": "19",
+				"Nation": "España",
+				"Events": []
+			},
+			{
+				"Name": "González D.",
+				"Jersey": "3",
+				"Nation": "España",
+				"Events": []
+			},
+			{
+				"Name": "Kuzmanovic Z.",
+				"Jersey": "6",
+				"Nation": "Serbia",
+				"Events": [
+					{
+						"Type": "substitution-in",
+						"Count": 0,
+						"Metadata": "84'",
+						"At": "84'",
+						"Extras": null
+					},
+					{
+						"Type": "y-card",
+						"Count": 1,
+						"Metadata": "90+1' Kuzmanovic Z.",
+						"At": "90+1'",
+						"Extras": null
+					},
+					{
+						"Type": "yr-card",
+						"Count": 2,
+						"Metadata": "90+2' Kuzmanovic Z.",
+						"At": "90+2'",
+						"Extras": null
+					}
+				]
+			},
+			{
+				"Name": "Mula A.",
+				"Jersey": "28",
+				"Nation": "España",
+				"Events": [
+					{
+						"Type": "substitution-in",
+						"Count": 0,
+						"Metadata": "80'",
+						"At": "80'",
+						"Extras": null
+					}
+				]
+			},
+			{
+				"Name": "Prieto A. (G)",
+				"Jersey": "25",
+				"Nation": "España",
+				"Events": []
+			}
+		]
+	}
 }

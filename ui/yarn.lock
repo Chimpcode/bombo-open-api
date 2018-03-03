@@ -2,6 +2,20 @@
 # yarn lockfile v1
 
 
+"@babel/helper-annotate-as-pure@^7.0.0-beta.37":
+  version "7.0.0-beta.40"
+  resolved "https://registry.yarnpkg.com/@babel/helper-annotate-as-pure/-/helper-annotate-as-pure-7.0.0-beta.40.tgz#095dd4c70b231eba17ebf61c3434e6f9d71bd574"
+  dependencies:
+    "@babel/types" "7.0.0-beta.40"
+
+"@babel/types@7.0.0-beta.40":
+  version "7.0.0-beta.40"
+  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0-beta.40.tgz#25c3d7aae14126abe05fcb098c65a66b6d6b8c14"
+  dependencies:
+    esutils "^2.0.2"
+    lodash "^4.2.0"
+    to-fast-properties "^2.0.0"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -321,6 +335,13 @@ aws4@^1.2.1, aws4@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.6.0.tgz#83ef5ca860b2b32e4a0deedee8c771b9db57471e"
 
+axios@^0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
+  dependencies:
+    follow-redirects "^1.3.0"
+    is-buffer "^1.1.5"
+
 axobject-query@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/axobject-query/-/axobject-query-0.1.0.tgz#62f59dbc59c9f9242759ca349960e7a2fe3c36c0"
@@ -538,6 +559,14 @@ babel-plugin-jest-hoist@^20.0.3:
   version "20.0.3"
   resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-20.0.3.tgz#afedc853bd3f8dc3548ea671fbe69d03cc2c1767"
 
+babel-plugin-styled-components@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.5.0.tgz#4549f28a19fb05170aa9ee429b4de0eac2d2401d"
+  dependencies:
+    "@babel/helper-annotate-as-pure" "^7.0.0-beta.37"
+    babel-types "^6.26.0"
+    stylis "^3.0.0"
+
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-async-functions/-/babel-plugin-syntax-async-functions-6.13.0.tgz#cad9cad1191b5ad634bf30ae0872391e0647be95"
@@ -545,6 +574,10 @@ babel-plugin-syntax-async-functions@^6.8.0:
 babel-plugin-syntax-class-properties@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-class-properties/-/babel-plugin-syntax-class-properties-6.13.0.tgz#d7eb23b79a317f8543962c505b827c7d6cac27de"
+
+babel-plugin-syntax-decorators@^6.1.18:
+  version "6.13.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-syntax-decorators/-/babel-plugin-syntax-decorators-6.13.0.tgz#312563b4dbde3cc806cee3e416cceeaddd11ac0b"
 
 babel-plugin-syntax-dynamic-import@6.18.0, babel-plugin-syntax-dynamic-import@^6.18.0:
   version "6.18.0"
@@ -586,6 +619,14 @@ babel-plugin-transform-class-properties@6.24.1:
     babel-plugin-syntax-class-properties "^6.8.0"
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
+
+babel-plugin-transform-decorators-legacy@1.3.4, babel-plugin-transform-decorators-legacy@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-decorators-legacy/-/babel-plugin-transform-decorators-legacy-1.3.4.tgz#741b58f6c5bce9e6027e0882d9c994f04f366925"
+  dependencies:
+    babel-plugin-syntax-decorators "^6.1.18"
+    babel-runtime "^6.2.0"
+    babel-template "^6.3.0"
 
 babel-plugin-transform-es2015-arrow-functions@^6.22.0:
   version "6.22.0"
@@ -918,14 +959,14 @@ babel-register@^6.26.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@6.26.0, babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
+babel-runtime@6.26.0, babel-runtime@^6.18.0, babel-runtime@^6.2.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   dependencies:
     core-js "^2.4.0"
     regenerator-runtime "^0.11.0"
 
-babel-template@^6.16.0, babel-template@^6.24.1, babel-template@^6.26.0:
+babel-template@^6.16.0, babel-template@^6.24.1, babel-template@^6.26.0, babel-template@^6.3.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-template/-/babel-template-6.26.0.tgz#de03e2d16396b069f46dd9fff8521fb1a0e35e02"
   dependencies:
@@ -1988,7 +2029,7 @@ dotenv-expand@4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/dotenv-expand/-/dotenv-expand-4.2.0.tgz#def1f1ca5d6059d24a766e587942c21106ce1275"
 
-dotenv@4.0.0:
+dotenv@4.0.0, dotenv@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-4.0.0.tgz#864ef1379aced55ce6f95debecdce179f7a0cd1d"
 
@@ -1999,6 +2040,10 @@ duplexer3@^0.1.4:
 duplexer@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
+
+duration-js@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/duration-js/-/duration-js-4.0.0.tgz#ab91575a4f1a6b096034685cfc6ea9aca99cd63f"
 
 ecc-jsbn@~0.1.1:
   version "0.1.1"
@@ -2619,6 +2664,12 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
+follow-redirects@^1.3.0:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.4.1.tgz#d8120f4518190f55aac65bb6fc7b85fcd666d6aa"
+  dependencies:
+    debug "^3.1.0"
+
 for-in@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
@@ -2974,6 +3025,10 @@ hoek@4.x.x:
 hoist-non-react-statics@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
+
+hoist-non-react-statics@^2.3.1:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.0.tgz#d2ca2dfc19c5a91c5a6615ce8e564ef0347e2a40"
 
 home-or-tmp@^2.0.0:
   version "2.0.0"
@@ -3997,7 +4052,7 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-"lodash@>=3.5 <5", lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.3.0:
+"lodash@>=3.5 <5", lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.3.0:
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
@@ -4196,6 +4251,20 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.1, mkdirp@~0.5.0, mkdi
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
+
+mobx-react@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-4.4.2.tgz#22d710974883de1763cdafce3025570a79c64336"
+  dependencies:
+    hoist-non-react-statics "^2.3.1"
+
+mobx@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-3.6.1.tgz#ae63a8f00e1485a740d0f91ae2f6a5f68e303bea"
+
+moment@^2.20.1:
+  version "2.20.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.20.1.tgz#d6eb1a46cbcc14a2b2f9434112c1ff8907f313fd"
 
 ms@2.0.0:
   version "2.0.0"
@@ -5156,6 +5225,23 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-app-rewire-mobx@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/react-app-rewire-mobx/-/react-app-rewire-mobx-1.0.7.tgz#50ae45f241dccda9ec7c0904cfea676be765ec81"
+  dependencies:
+    babel-plugin-transform-decorators-legacy "1.3.4"
+
+react-app-rewired@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/react-app-rewired/-/react-app-rewired-1.4.1.tgz#e4cca962590a9893710664728bb5ee02f3976dbe"
+  dependencies:
+    cross-spawn "^5.1.0"
+    dotenv "^4.0.0"
+
+react-content-loader@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/react-content-loader/-/react-content-loader-3.1.1.tgz#4121cdf1bbf58387bfd031fd4569d0617c0de69d"
+
 react-dev-utils@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-5.0.0.tgz#425ac7c9c40c2603bc4f7ab8836c1406e96bb473"
@@ -5968,7 +6054,7 @@ stylis-rule-sheet@^0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/stylis-rule-sheet/-/stylis-rule-sheet-0.0.7.tgz#5c51dc879141a61821c2094ba91d2cbcf2469c6c"
 
-stylis@^3.4.0:
+stylis@^3.0.0, stylis@^3.4.0:
   version "3.4.10"
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.4.10.tgz#a135cab4b9ff208e327fbb5a6fde3fa991c638ee"
 
@@ -6139,6 +6225,10 @@ to-arraybuffer@^1.0.0:
 to-fast-properties@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-1.0.3.tgz#b83571fa4d8c25b82e231b06e3a3055de4ca1a47"
+
+to-fast-properties@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
 
 toposort@^1.0.0:
   version "1.0.6"

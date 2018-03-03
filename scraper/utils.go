@@ -1,11 +1,13 @@
 package scraper
 
-import "strings"
+import (
+	"strings"
+)
 
 func GetIdFromMatchUrl(urlMatch string) string {
 	fixedURL := ""
 	if strings.HasSuffix(urlMatch, "/") {
-		fixedURL = urlMatch[0 : len(urlMatch)-2]
+		fixedURL = urlMatch[0 : len(urlMatch)-1]
 	} else {
 		fixedURL = urlMatch
 	}

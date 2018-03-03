@@ -41,11 +41,12 @@ const InnerButton = styled.div`
 class CoolButton extends Component {
 	constructor(props) {
 		super(props);
+		this.onClick = this.props.onClick;
 	}
 
 	render() {
 		return (
-			<CoolWrap>
+			<CoolWrap onClick={this.onClick ? this.onClick : null}>
 				<InnerButton>{this.props.children}</InnerButton>
 			</CoolWrap>
 		);

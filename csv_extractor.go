@@ -11,7 +11,7 @@ func CreateCSVFromStruct(teams map[string]*scraper.Team) {
 	buffer := bytes.NewBufferString("")
 	for _, team := range teams {
 
-		for _, player := range team.GolKeeper {
+		for _, player := range team.GoalKeeper {
 			s := fmt.Sprintf("%s,%s,%d\n", player.Name, player.Team, player.Cost)
 			buffer.Write([]byte(s))
 		}

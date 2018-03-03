@@ -158,7 +158,7 @@ func GetFullTeamsInfo(tournamentUrl string, verbose bool) (League, error) {
 				case "entrenador":
 					team.Coach = p
 				case "porteros":
-					team.GolKeeper = append(team.GolKeeper, p)
+					team.GoalKeeper = append(team.GoalKeeper, p)
 
 				}
 
