@@ -16,7 +16,7 @@ func init() {
 
 
 func normalizeName(name string) string {
-	return strings.Replace(strings.ToLower(name), " ", "_", -1)
+	return strings.Replace(name, " ", "_", -1)
 }
 
 func SaveDataForMatchWork(w *Work) error {
