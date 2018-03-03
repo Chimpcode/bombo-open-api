@@ -9,6 +9,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 	"github.com/gocolly/colly"
 	"github.com/k0kubun/pp"
+	"fmt"
 )
 
 func GetScoreFromMatch(urlMatch string) (MatchScore, error) {
@@ -73,6 +74,7 @@ func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
 
 	// Only lineups
 	c.OnHTML("div.lineups-wrapper > table.parts > tbody", func(e *colly.HTMLElement) {
+		pp.Println("INTO DIV.LINE...")
 		typeOfEvent := ""
 
 		lEventsPlayer := make([]EventPlayer, 0)
@@ -197,8 +199,17 @@ func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
 		finalEvents.Away.Events[typeOfEvent] = rEventsPlayer
 	})
 
+	c.OnRequest(func(r *colly.Request) {
+		pp.Println("(MATCH) Visiting", r.URL.String())
+	})
+
+	c.OnError(func(r *colly.Response, err error) {
+		log.Println("Request URL:", r.Request.URL, "failed with response:", r, "\nError:", err)
+	})
+
 	err := c.Post(finalURL, map[string]string{})
 	if err != nil {
+		log.Println("c.Post(finalURL, map[string]string{}) ", err)
 		return finalEvents, err
 	}
 
