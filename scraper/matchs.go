@@ -203,8 +203,8 @@ func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
 	})
 
 	c.OnResponse(func(r *colly.Response) {
-		pp.Println(r.Headers)
 		pp.Println(r.StatusCode)
+		pp.Println(string(r.Body))
 	})
 
 	c.OnError(func(r *colly.Response, err error) {
