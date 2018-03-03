@@ -2,11 +2,237 @@
 	"home": {
 		"name": "Leicester",
 		"score": "-",
-		"events": {}
+		"events": {
+			"alineaciones_iniciales": [
+				{
+					"name": "Albrighton M.",
+					"jersey": "11",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Amartey D.",
+					"jersey": "18",
+					"nation": "Ghana",
+					"events": []
+				},
+				{
+					"name": "Fuchs Ch.",
+					"jersey": "28",
+					"nation": "Austria",
+					"events": []
+				},
+				{
+					"name": "James M.",
+					"jersey": "22",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Maguire H.",
+					"jersey": "15",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Mahrez R.",
+					"jersey": "26",
+					"nation": "Argelia",
+					"events": []
+				},
+				{
+					"name": "Morgan W. (C)",
+					"jersey": "5",
+					"nation": "Jamaica",
+					"events": []
+				},
+				{
+					"name": "Ndidi W.",
+					"jersey": "25",
+					"nation": "Nigeria",
+					"events": []
+				},
+				{
+					"name": "Schmeichel K. (G)",
+					"jersey": "1",
+					"nation": "Dinamarca",
+					"events": []
+				},
+				{
+					"name": "Silva Ad.",
+					"jersey": "14",
+					"nation": "Portugal",
+					"events": []
+				},
+				{
+					"name": "Vardy J.",
+					"jersey": "9",
+					"nation": "Inglaterra",
+					"events": []
+				}
+			],
+			"suplentes": [
+				{
+					"name": "Chilwell B.",
+					"jersey": "3",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Diabate F.",
+					"jersey": "33",
+					"nation": "Mali",
+					"events": []
+				},
+				{
+					"name": "Dragovic A.",
+					"jersey": "16",
+					"nation": "Austria",
+					"events": []
+				},
+				{
+					"name": "Gray D.",
+					"jersey": "7",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Hamer B. (G)",
+					"jersey": "12",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Iborra",
+					"jersey": "21",
+					"nation": "España",
+					"events": []
+				},
+				{
+					"name": "Iheanacho K.",
+					"jersey": "8",
+					"nation": "Nigeria",
+					"events": []
+				}
+			]
+		}
 	},
 	"away": {
 		"name": "Bournemouth",
 		"score": "-",
-		"events": {}
+		"events": {
+			"alineaciones_iniciales": [
+				{
+					"name": "Ake N.",
+					"jersey": "5",
+					"nation": "Holanda",
+					"events": []
+				},
+				{
+					"name": "Begovic A. (G)",
+					"jersey": "27",
+					"nation": "Bosnia y Herzegovina",
+					"events": []
+				},
+				{
+					"name": "Cook L.",
+					"jersey": "16",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Cook S.",
+					"jersey": "3",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Daniels C.",
+					"jersey": "11",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Francis S. (C)",
+					"jersey": "2",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Gosling D.",
+					"jersey": "4",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "King J.",
+					"jersey": "17",
+					"nation": "Noruega",
+					"events": []
+				},
+				{
+					"name": "Smith A.",
+					"jersey": "15",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Stanislas J.",
+					"jersey": "19",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Wilson C.",
+					"jersey": "13",
+					"nation": "Inglaterra",
+					"events": []
+				}
+			],
+			"suplentes": [
+				{
+					"name": "Boruc A. (G)",
+					"jersey": "1",
+					"nation": "Polonia",
+					"events": []
+				},
+				{
+					"name": "Defoe J.",
+					"jersey": "18",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Fraser R.",
+					"jersey": "24",
+					"nation": "Escocia",
+					"events": []
+				},
+				{
+					"name": "Mousset L.",
+					"jersey": "31",
+					"nation": "Francia",
+					"events": []
+				},
+				{
+					"name": "Simpson J.",
+					"jersey": "42",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Surman A.",
+					"jersey": "6",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Taylor K.",
+					"jersey": "58",
+					"nation": "Inglaterra",
+					"events": []
+				}
+			]
+		}
 	}
 }

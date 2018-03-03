@@ -1,12 +1,348 @@
 {
 	"home": {
 		"name": "Burnley",
-		"score": "-",
-		"events": {}
+		"score": "2",
+		"events": {
+			"alineaciones_iniciales": [
+				{
+					"name": "Barnes A.",
+					"jersey": "10",
+					"nation": "Inglaterra",
+					"events": [
+						{
+							"type": "soccer-ball",
+							"count": 0,
+							"metadata": "56' Barnes A. (Lowton M.)",
+							"at": "56'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Cork J.",
+					"jersey": "4",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Gudmundsson J.",
+					"jersey": "17",
+					"nation": "Islandia",
+					"events": []
+				},
+				{
+					"name": "Hendrick J.",
+					"jersey": "13",
+					"nation": "Irlanda",
+					"events": [
+						{
+							"type": "substitution-out",
+							"count": 0,
+							"metadata": "46' Hendrick J. (Wood Ch.)",
+							"at": "46'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Lennon A.",
+					"jersey": "25",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Lowton M.",
+					"jersey": "2",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Mee B. (C)",
+					"jersey": "6",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Pope N. (G)",
+					"jersey": "29",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Tarkowski J.",
+					"jersey": "5",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Ward S.",
+					"jersey": "23",
+					"nation": "Irlanda",
+					"events": []
+				},
+				{
+					"name": "Westwood A.",
+					"jersey": "18",
+					"nation": "Inglaterra",
+					"events": [
+						{
+							"type": "y-card",
+							"count": 0,
+							"metadata": "36' Westwood A.",
+							"at": "36'",
+							"extras": null
+						}
+					]
+				}
+			],
+			"suplentes": [
+				{
+					"name": "Bardsley P.",
+					"jersey": "26",
+					"nation": "Escocia",
+					"events": []
+				},
+				{
+					"name": "Lindegaard A. (G)",
+					"jersey": "22",
+					"nation": "Dinamarca",
+					"events": []
+				},
+				{
+					"name": "Long K.",
+					"jersey": "28",
+					"nation": "Irlanda",
+					"events": []
+				},
+				{
+					"name": "Marney D.",
+					"jersey": "8",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "N'Koudou G.",
+					"jersey": "7",
+					"nation": "Francia",
+					"events": []
+				},
+				{
+					"name": "Vokes S.",
+					"jersey": "9",
+					"nation": "Gales",
+					"events": []
+				},
+				{
+					"name": "Wood Ch.",
+					"jersey": "11",
+					"nation": "Nueva Zelanda",
+					"events": [
+						{
+							"type": "substitution-in",
+							"count": 0,
+							"metadata": "46'",
+							"at": "46'",
+							"extras": null
+						},
+						{
+							"type": "soccer-ball",
+							"count": 1,
+							"metadata": "80' Wood Ch. (Gudmundsson J.)",
+							"at": "80'",
+							"extras": null
+						}
+					]
+				}
+			]
+		}
 	},
 	"away": {
 		"name": "Everton",
-		"score": "-",
-		"events": {}
+		"score": "1",
+		"events": {
+			"alineaciones_iniciales": [
+				{
+					"name": "Calvert-Lewin D.",
+					"jersey": "29",
+					"nation": "Inglaterra",
+					"events": [
+						{
+							"type": "y-card",
+							"count": 0,
+							"metadata": "26' Calvert-Lewin D.",
+							"at": "26'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Coleman S.",
+					"jersey": "23",
+					"nation": "Irlanda",
+					"events": []
+				},
+				{
+					"name": "Davies T.",
+					"jersey": "26",
+					"nation": "Inglaterra",
+					"events": [
+						{
+							"type": "substitution-out",
+							"count": 0,
+							"metadata": "59' Davies T. (Rooney W.)",
+							"at": "59'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Gueye I.",
+					"jersey": "17",
+					"nation": "Senegal",
+					"events": []
+				},
+				{
+					"name": "Keane M.",
+					"jersey": "4",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Martina C.",
+					"jersey": "15",
+					"nation": "Curazao",
+					"events": []
+				},
+				{
+					"name": "Pickford J. (G)",
+					"jersey": "1",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Sigurdsson G.",
+					"jersey": "18",
+					"nation": "Islandia",
+					"events": [
+						{
+							"type": "substitution-out",
+							"count": 0,
+							"metadata": "83' Sigurdsson G. (Bolasie Y.)",
+							"at": "83'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Tosun C.",
+					"jersey": "14",
+					"nation": "Turquía",
+					"events": [
+						{
+							"type": "soccer-ball",
+							"count": 0,
+							"metadata": "20' Tosun C. (Coleman S.)",
+							"at": "20'",
+							"extras": null
+						},
+						{
+							"type": "substitution-out",
+							"count": 1,
+							"metadata": "68' Tosun C. (Niasse O.)",
+							"at": "68'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Walcott T.",
+					"jersey": "11",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Williams A. (C)",
+					"jersey": "5",
+					"nation": "Gales",
+					"events": [
+						{
+							"type": "r-card",
+							"count": 0,
+							"metadata": "86' Williams A.",
+							"at": "86'",
+							"extras": null
+						}
+					]
+				}
+			],
+			"suplentes": [
+				{
+					"name": "Baines L.",
+					"jersey": "3",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Bolasie Y.",
+					"jersey": "7",
+					"nation": "RD Congo",
+					"events": [
+						{
+							"type": "substitution-in",
+							"count": 0,
+							"metadata": "83'",
+							"at": "83'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Holgate M.",
+					"jersey": "30",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Niasse O.",
+					"jersey": "19",
+					"nation": "Senegal",
+					"events": [
+						{
+							"type": "substitution-in",
+							"count": 0,
+							"metadata": "68'",
+							"at": "68'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Robles J. (G)",
+					"jersey": "33",
+					"nation": "España",
+					"events": []
+				},
+				{
+					"name": "Rooney W.",
+					"jersey": "10",
+					"nation": "Inglaterra",
+					"events": [
+						{
+							"type": "substitution-in",
+							"count": 0,
+							"metadata": "59'",
+							"at": "59'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Schneiderlin M.",
+					"jersey": "2",
+					"nation": "Francia",
+					"events": []
+				}
+			]
+		}
 	}
 }

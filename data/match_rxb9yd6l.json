@@ -2,11 +2,237 @@
 	"home": {
 		"name": "Tottenham",
 		"score": "-",
-		"events": {}
+		"events": {
+			"alineaciones_iniciales": [
+				{
+					"name": "Alli D.",
+					"jersey": "20",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Aurier S.",
+					"jersey": "24",
+					"nation": "Costa de Marfil",
+					"events": []
+				},
+				{
+					"name": "Davies B.",
+					"jersey": "33",
+					"nation": "Gales",
+					"events": []
+				},
+				{
+					"name": "Dembélé M.",
+					"jersey": "19",
+					"nation": "Bélgica",
+					"events": []
+				},
+				{
+					"name": "Dier E.",
+					"jersey": "15",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Eriksen C.",
+					"jersey": "23",
+					"nation": "Dinamarca",
+					"events": []
+				},
+				{
+					"name": "Kane H.",
+					"jersey": "10",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Lloris H. (G) (C)",
+					"jersey": "1",
+					"nation": "Francia",
+					"events": []
+				},
+				{
+					"name": "Sánchez D.",
+					"jersey": "6",
+					"nation": "Colombia",
+					"events": []
+				},
+				{
+					"name": "Son Heung-Min",
+					"jersey": "7",
+					"nation": "Corea del Sur",
+					"events": []
+				},
+				{
+					"name": "Vertonghen J.",
+					"jersey": "5",
+					"nation": "Bélgica",
+					"events": []
+				}
+			],
+			"suplentes": [
+				{
+					"name": "Lamela E.",
+					"jersey": "11",
+					"nation": "Argentina",
+					"events": []
+				},
+				{
+					"name": "Lucas",
+					"jersey": "27",
+					"nation": "Brasil",
+					"events": []
+				},
+				{
+					"name": "Rose D.",
+					"jersey": "3",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Sissoko M.",
+					"jersey": "17",
+					"nation": "Francia",
+					"events": []
+				},
+				{
+					"name": "Trippier K.",
+					"jersey": "2",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Vorm M. (G)",
+					"jersey": "13",
+					"nation": "Holanda",
+					"events": []
+				},
+				{
+					"name": "Wanyama V.",
+					"jersey": "12",
+					"nation": "Kenia",
+					"events": []
+				}
+			]
+		}
 	},
 	"away": {
 		"name": "Huddersfield",
 		"score": "-",
-		"events": {}
+		"events": {
+			"alineaciones_iniciales": [
+				{
+					"name": "Hadergjonaj F.",
+					"jersey": "33",
+					"nation": "Suiza",
+					"events": []
+				},
+				{
+					"name": "Hogg J. (C)",
+					"jersey": "6",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Kongolo T.",
+					"jersey": "5",
+					"nation": "Holanda",
+					"events": []
+				},
+				{
+					"name": "Lossl J. (G)",
+					"jersey": "1",
+					"nation": "Dinamarca",
+					"events": []
+				},
+				{
+					"name": "Mounie S.",
+					"jersey": "24",
+					"nation": "Benín",
+					"events": []
+				},
+				{
+					"name": "Pritchard A.",
+					"jersey": "21",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Quaner C.",
+					"jersey": "23",
+					"nation": "Alemania",
+					"events": []
+				},
+				{
+					"name": "Schindler C.",
+					"jersey": "26",
+					"nation": "Alemania",
+					"events": []
+				},
+				{
+					"name": "van La Parra R.",
+					"jersey": "17",
+					"nation": "Holanda",
+					"events": []
+				},
+				{
+					"name": "Williams D.",
+					"jersey": "19",
+					"nation": "Estados Unidos",
+					"events": []
+				},
+				{
+					"name": "Zanka",
+					"jersey": "25",
+					"nation": "Dinamarca",
+					"events": []
+				}
+			],
+			"suplentes": [
+				{
+					"name": "Billing P.",
+					"jersey": "8",
+					"nation": "Dinamarca",
+					"events": []
+				},
+				{
+					"name": "Depoitre L.",
+					"jersey": "20",
+					"nation": "Bélgica",
+					"events": []
+				},
+				{
+					"name": "Green R. (G)",
+					"jersey": "28",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Ince T.",
+					"jersey": "22",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Lowe C.",
+					"jersey": "15",
+					"nation": "Alemania",
+					"events": []
+				},
+				{
+					"name": "Malone S.",
+					"jersey": "3",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Smith T.",
+					"jersey": "2",
+					"nation": "Inglaterra",
+					"events": []
+				}
+			]
+		}
 	}
 }

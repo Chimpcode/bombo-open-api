@@ -9,6 +9,8 @@ import (
 	"github.com/PuerkitoBio/goquery"
 	"github.com/gocolly/colly"
 	"github.com/k0kubun/pp"
+	"net/http"
+	"bytes"
 )
 
 func GetScoreFromMatch(urlMatch string) (MatchScore, error) {
@@ -199,6 +201,7 @@ func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
 	})
 
 	c.OnRequest(func(r *colly.Request) {
+		//r.Headers.Set("x-fsign", "vPAvOgxk")
 		pp.Println("(MATCH) Visiting", r.URL.String())
 		pp.Println("(MATCH) Visiting [HEADERS]", r.Headers)
 		pp.Println("(MATCH) Visiting [BODY]", r.Body)
@@ -213,9 +216,17 @@ func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
 		log.Println("Request URL:", r.Request.URL, "failed with response:", r, "\nError:", err)
 	})
 
-	err := c.Post(finalURL, map[string]string{})
+	//err := c.Post(finalURL, map[string]string{})
+	//if err != nil {
+	//	log.Println("c.Post(finalURL, map[string]string{}) ", err)
+	//	return finalEvents, err
+	//}
+
+	//c.Visit(finalURL)
+	body := bytes.NewBufferString("")
+	err := c.Request("GET", finalURL, body, nil, http.Header{"x-fsign":[]string{"SW9D1eZo"}})
 	if err != nil {
-		log.Println("c.Post(finalURL, map[string]string{}) ", err)
+		log.Println("c.Request('GET', finalURL ...) ", err)
 		return finalEvents, err
 	}
 

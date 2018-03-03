@@ -2,11 +2,245 @@
 	"home": {
 		"name": "Swansea",
 		"score": "-",
-		"events": {}
+		"events": {
+			"alineaciones_iniciales": [
+				{
+					"name": "Ayew A.",
+					"jersey": "19",
+					"nation": "Ghana",
+					"events": []
+				},
+				{
+					"name": "Ayew J.",
+					"jersey": "18",
+					"nation": "Ghana",
+					"events": []
+				},
+				{
+					"name": "Clucas S.",
+					"jersey": "17",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Fabianski L. (G)",
+					"jersey": "1",
+					"nation": "Polonia",
+					"events": []
+				},
+				{
+					"name": "Fernández F. (C)",
+					"jersey": "33",
+					"nation": "Argentina",
+					"events": []
+				},
+				{
+					"name": "King A.",
+					"jersey": "24",
+					"nation": "Gales",
+					"events": []
+				},
+				{
+					"name": "Ki Sung-Yong",
+					"jersey": "4",
+					"nation": "Corea del Sur",
+					"events": [
+						{
+							"type": "soccer-ball",
+							"count": 0,
+							"metadata": "8' Ki Sung-Yong (Ayew A.)",
+							"at": "8'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Mawson A.",
+					"jersey": "6",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Naughton K.",
+					"jersey": "26",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Olsson Mart.",
+					"jersey": "16",
+					"nation": "Suecia",
+					"events": []
+				},
+				{
+					"name": "van der Hoorn M.",
+					"jersey": "5",
+					"nation": "Holanda",
+					"events": []
+				}
+			],
+			"suplentes": [
+				{
+					"name": "Abraham T.",
+					"jersey": "10",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Bartley K.",
+					"jersey": "27",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Britton L.",
+					"jersey": "7",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Carroll T.",
+					"jersey": "14",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Dyer N.",
+					"jersey": "12",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Narsingh L.",
+					"jersey": "11",
+					"nation": "Holanda",
+					"events": []
+				},
+				{
+					"name": "Nordfeldt K. (G)",
+					"jersey": "13",
+					"nation": "Suecia",
+					"events": []
+				}
+			]
+		}
 	},
 	"away": {
 		"name": "West Ham",
 		"score": "-",
-		"events": {}
+		"events": {
+			"alineaciones_iniciales": [
+				{
+					"name": "Adrián (G)",
+					"jersey": "13",
+					"nation": "España",
+					"events": []
+				},
+				{
+					"name": "Arnautovic M.",
+					"jersey": "7",
+					"nation": "Austria",
+					"events": []
+				},
+				{
+					"name": "Chicharito",
+					"jersey": "17",
+					"nation": "México",
+					"events": []
+				},
+				{
+					"name": "Cresswell A.",
+					"jersey": "3",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Evra P.",
+					"jersey": "27",
+					"nation": "Francia",
+					"events": []
+				},
+				{
+					"name": "Kouyaté C.",
+					"jersey": "8",
+					"nation": "Senegal",
+					"events": []
+				},
+				{
+					"name": "Lanzini M.",
+					"jersey": "10",
+					"nation": "Argentina",
+					"events": []
+				},
+				{
+					"name": "Noble M. (C)",
+					"jersey": "16",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Reid W.",
+					"jersey": "2",
+					"nation": "Nueva Zelanda",
+					"events": []
+				},
+				{
+					"name": "Rice D.",
+					"jersey": "41",
+					"nation": "Irlanda",
+					"events": []
+				},
+				{
+					"name": "Zabaleta P.",
+					"jersey": "5",
+					"nation": "Argentina",
+					"events": []
+				}
+			],
+			"suplentes": [
+				{
+					"name": "Antonio M.",
+					"jersey": "30",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Browne M.",
+					"jersey": "4",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Byram S.",
+					"jersey": "22",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Cullen J.",
+					"jersey": "33",
+					"nation": "Irlanda",
+					"events": []
+				},
+				{
+					"name": "Hart J. (G)",
+					"jersey": "25",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Hugill J.",
+					"jersey": "12",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Mario J.",
+					"jersey": "18",
+					"nation": "Portugal",
+					"events": []
+				}
+			]
+		}
 	}
 }

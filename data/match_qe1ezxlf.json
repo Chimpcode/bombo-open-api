@@ -2,11 +2,237 @@
 	"home": {
 		"name": "Watford",
 		"score": "-",
-		"events": {}
+		"events": {
+			"alineaciones_iniciales": [
+				{
+					"name": "Capoue E.",
+					"jersey": "29",
+					"nation": "Francia",
+					"events": []
+				},
+				{
+					"name": "Carrillo A.",
+					"jersey": "28",
+					"nation": "Perú",
+					"events": []
+				},
+				{
+					"name": "Deeney T. (C)",
+					"jersey": "9",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Doucouré A.",
+					"jersey": "16",
+					"nation": "Francia",
+					"events": []
+				},
+				{
+					"name": "Holebas J.",
+					"jersey": "25",
+					"nation": "Grecia",
+					"events": []
+				},
+				{
+					"name": "Janmaat D.",
+					"jersey": "2",
+					"nation": "Holanda",
+					"events": []
+				},
+				{
+					"name": "Karnezis O. (G)",
+					"jersey": "30",
+					"nation": "Grecia",
+					"events": []
+				},
+				{
+					"name": "Mariappa A.",
+					"jersey": "6",
+					"nation": "Jamaica",
+					"events": []
+				},
+				{
+					"name": "Pereyra R.",
+					"jersey": "37",
+					"nation": "Argentina",
+					"events": []
+				},
+				{
+					"name": "Prodl S.",
+					"jersey": "5",
+					"nation": "Austria",
+					"events": []
+				},
+				{
+					"name": "Richarlison",
+					"jersey": "11",
+					"nation": "Brasil",
+					"events": []
+				}
+			],
+			"suplentes": [
+				{
+					"name": "Britos M.",
+					"jersey": "3",
+					"nation": "Uruguay",
+					"events": []
+				},
+				{
+					"name": "Gomes H. (G)",
+					"jersey": "1",
+					"nation": "Brasil",
+					"events": []
+				},
+				{
+					"name": "Gray A.",
+					"jersey": "18",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Hughes W.",
+					"jersey": "19",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Lukebakio D.",
+					"jersey": "20",
+					"nation": "Bélgica",
+					"events": []
+				},
+				{
+					"name": "Okaka S.",
+					"jersey": "33",
+					"nation": "Italia",
+					"events": []
+				},
+				{
+					"name": "Zeegelaar M.",
+					"jersey": "22",
+					"nation": "Holanda",
+					"events": []
+				}
+			]
+		}
 	},
 	"away": {
 		"name": "West Brom",
 		"score": "-",
-		"events": {}
+		"events": {
+			"alineaciones_iniciales": [
+				{
+					"name": "Brunt C.",
+					"jersey": "11",
+					"nation": "Irlanda del Norte",
+					"events": []
+				},
+				{
+					"name": "Dawson C.",
+					"jersey": "25",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Evans J. (C)",
+					"jersey": "6",
+					"nation": "Irlanda del Norte",
+					"events": []
+				},
+				{
+					"name": "Foster B. (G)",
+					"jersey": "1",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Gibbs K.",
+					"jersey": "3",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Hegazy A.",
+					"jersey": "26",
+					"nation": "Egipto",
+					"events": []
+				},
+				{
+					"name": "Krychowiak G.",
+					"jersey": "20",
+					"nation": "Polonia",
+					"events": []
+				},
+				{
+					"name": "Livermore J.",
+					"jersey": "8",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Phillips M.",
+					"jersey": "10",
+					"nation": "Escocia",
+					"events": []
+				},
+				{
+					"name": "Rodriguez J.",
+					"jersey": "19",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Rondón S.",
+					"jersey": "9",
+					"nation": "Venezuela",
+					"events": []
+				}
+			],
+			"suplentes": [
+				{
+					"name": "Burke O.",
+					"jersey": "17",
+					"nation": "Escocia",
+					"events": []
+				},
+				{
+					"name": "Field S.",
+					"jersey": "28",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "McAuley G.",
+					"jersey": "23",
+					"nation": "Irlanda del Norte",
+					"events": []
+				},
+				{
+					"name": "McClean J.",
+					"jersey": "14",
+					"nation": "Irlanda",
+					"events": []
+				},
+				{
+					"name": "Myhill G. O. (G)",
+					"jersey": "13",
+					"nation": "Gales",
+					"events": []
+				},
+				{
+					"name": "Nyom A.",
+					"jersey": "2",
+					"nation": "Camerún",
+					"events": []
+				},
+				{
+					"name": "Yacob C.",
+					"jersey": "5",
+					"nation": "Argentina",
+					"events": []
+				}
+			]
+		}
 	}
 }
