@@ -8,6 +8,7 @@ import (
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/gocolly/colly"
+	"github.com/k0kubun/pp"
 )
 
 func GetScoreFromMatch(urlMatch string) (MatchScore, error) {
@@ -61,6 +62,8 @@ func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
 
 	matchID := GetIdFromMatchUrl(urlMatch)
 	finalURL := InternalScoreBoardApi + "d_li_" + matchID + "_es_1"
+
+	pp.Println(finalURL)
 
 	finalEvents := MatchEvents{
 		Home: BaseMatchEvent{Events: map[string][]EventPlayer{}},
