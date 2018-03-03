@@ -3,7 +3,6 @@ package main
 import (
 	"time"
 	"github.com/kataras/iris"
-	"github.com/kataras/iris/middleware/basicauth"
 	"github.com/iris-contrib/middleware/cors"
 )
 
@@ -41,15 +40,15 @@ func main() {
 	managerApi := app.Party("/manager/")
 
 
-	bauth := basicauth.New(basicauth.Config{
-		Users: map[string]string{
-			"bregymr": "malpartida1",
-		},
-		Expires: 24*time.Hour,
-		Realm: "bombo",
-	})
+	//bauth := basicauth.New(basicauth.Config{
+	//	Users: map[string]string{
+	//		"bregymr": "malpartida1",
+	//	},
+	//	Expires: 24*time.Hour,
+	//	Realm: "bombo",
+	//})
 
-	managerApi.Use(bauth)
+	//managerApi.Use(bauth)
 
 	LinkApi(api, manager)
 
