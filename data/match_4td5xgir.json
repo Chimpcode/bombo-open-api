@@ -1,0 +1,12 @@
+{
+	"home": {
+		"name": "Southampton",
+		"score": "-",
+		"events": {}
+	},
+	"away": {
+		"name": "Stoke",
+		"score": "-",
+		"events": {}
+	}
+}

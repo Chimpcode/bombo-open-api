@@ -1,0 +1,377 @@
+{
+	"home": {
+		"name": "Brighton",
+		"score": "4",
+		"events": {
+			"alineaciones_iniciales": [
+				{
+					"name": "Bong G.",
+					"jersey": "3",
+					"nation": "Camerún",
+					"events": []
+				},
+				{
+					"name": "Duffy S.",
+					"jersey": "22",
+					"nation": "Irlanda",
+					"events": []
+				},
+				{
+					"name": "Dunk L. (C)",
+					"jersey": "5",
+					"nation": "Inglaterra",
+					"events": [
+						{
+							"type": "soccer-ball-own",
+							"count": 0,
+							"metadata": "86' Dunk L. ",
+							"at": "86'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Gross P.",
+					"jersey": "13",
+					"nation": "Alemania",
+					"events": [
+						{
+							"type": "substitution-out",
+							"count": 0,
+							"metadata": "90+1' Gross P. (Kayal B.)",
+							"at": "90+1'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Izquierdo J.",
+					"jersey": "19",
+					"nation": "Colombia",
+					"events": []
+				},
+				{
+					"name": "Knockaert A.",
+					"jersey": "11",
+					"nation": "Francia",
+					"events": [
+						{
+							"type": "soccer-ball",
+							"count": 0,
+							"metadata": "73' Knockaert A. (Gross P.)",
+							"at": "73'",
+							"extras": null
+						},
+						{
+							"type": "substitution-out",
+							"count": 1,
+							"metadata": "79' Knockaert A. (March S.)",
+							"at": "79'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Murray G.",
+					"jersey": "17",
+					"nation": "Inglaterra",
+					"events": [
+						{
+							"type": "soccer-ball",
+							"count": 0,
+							"metadata": "18' Murray G. ",
+							"at": "18'",
+							"extras": null
+						},
+						{
+							"type": "y-card",
+							"count": 1,
+							"metadata": "63' Murray G.",
+							"at": "63'",
+							"extras": null
+						},
+						{
+							"type": "soccer-ball",
+							"count": 2,
+							"metadata": "69' Murray G. (Izquierdo J.)",
+							"at": "69'",
+							"extras": null
+						},
+						{
+							"type": "substitution-out",
+							"count": 3,
+							"metadata": "82' Murray G. (Locadia J.)",
+							"at": "82'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Propper D.",
+					"jersey": "24",
+					"nation": "Holanda",
+					"events": []
+				},
+				{
+					"name": "Ryan M. (G)",
+					"jersey": "1",
+					"nation": "Australia",
+					"events": []
+				},
+				{
+					"name": "Schelotto E.",
+					"jersey": "21",
+					"nation": "Argentina",
+					"events": []
+				},
+				{
+					"name": "Stephens D.",
+					"jersey": "6",
+					"nation": "Inglaterra",
+					"events": []
+				}
+			],
+			"suplentes": [
+				{
+					"name": "Goldson C.",
+					"jersey": "18",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Kayal B.",
+					"jersey": "7",
+					"nation": "Israel",
+					"events": [
+						{
+							"type": "substitution-in",
+							"count": 0,
+							"metadata": "90+1'",
+							"at": "90+1'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Krul T. (G)",
+					"jersey": "26",
+					"nation": "Holanda",
+					"events": []
+				},
+				{
+					"name": "Locadia J.",
+					"jersey": "25",
+					"nation": "Holanda",
+					"events": [
+						{
+							"type": "substitution-in",
+							"count": 0,
+							"metadata": "82'",
+							"at": "82'",
+							"extras": null
+						},
+						{
+							"type": "soccer-ball",
+							"count": 1,
+							"metadata": "90' Locadia J. (Stephens D.)",
+							"at": "90'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "March S.",
+					"jersey": "20",
+					"nation": "Inglaterra",
+					"events": [
+						{
+							"type": "substitution-in",
+							"count": 0,
+							"metadata": "79'",
+							"at": "79'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Saltor B.",
+					"jersey": "2",
+					"nation": "España",
+					"events": []
+				},
+				{
+					"name": "Ulloa L.",
+					"jersey": "16",
+					"nation": "Argentina",
+					"events": []
+				}
+			]
+		}
+	},
+	"away": {
+		"name": "Swansea",
+		"score": "1",
+		"events": {
+			"alineaciones_iniciales": [
+				{
+					"name": "Ayew J.",
+					"jersey": "18",
+					"nation": "Ghana",
+					"events": []
+				},
+				{
+					"name": "Carroll T.",
+					"jersey": "14",
+					"nation": "Inglaterra",
+					"events": [
+						{
+							"type": "substitution-out",
+							"count": 0,
+							"metadata": "66' Carroll T. (Abraham T.)",
+							"at": "66'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Clucas S.",
+					"jersey": "17",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Dyer N.",
+					"jersey": "12",
+					"nation": "Inglaterra",
+					"events": [
+						{
+							"type": "substitution-out",
+							"count": 0,
+							"metadata": "36' Dyer N. (Ayew A.)",
+							"at": "36'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Fabianski L. (G)",
+					"jersey": "1",
+					"nation": "Polonia",
+					"events": []
+				},
+				{
+					"name": "Fernández F. (C)",
+					"jersey": "33",
+					"nation": "Argentina",
+					"events": []
+				},
+				{
+					"name": "Ki Sung-Yong",
+					"jersey": "4",
+					"nation": "Corea del Sur",
+					"events": []
+				},
+				{
+					"name": "Mawson A.",
+					"jersey": "6",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Naughton K.",
+					"jersey": "26",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "Olsson Mart.",
+					"jersey": "16",
+					"nation": "Suecia",
+					"events": []
+				},
+				{
+					"name": "van der Hoorn M.",
+					"jersey": "5",
+					"nation": "Holanda",
+					"events": [
+						{
+							"type": "substitution-out",
+							"count": 0,
+							"metadata": "46' van der Hoorn M. (Narsingh L.)",
+							"at": "46'",
+							"extras": null
+						}
+					]
+				}
+			],
+			"suplentes": [
+				{
+					"name": "Abraham T.",
+					"jersey": "10",
+					"nation": "Inglaterra",
+					"events": [
+						{
+							"type": "substitution-in",
+							"count": 0,
+							"metadata": "66'",
+							"at": "66'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Ayew A.",
+					"jersey": "19",
+					"nation": "Ghana",
+					"events": [
+						{
+							"type": "substitution-in",
+							"count": 0,
+							"metadata": "36'",
+							"at": "36'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Bartley K.",
+					"jersey": "27",
+					"nation": "Inglaterra",
+					"events": []
+				},
+				{
+					"name": "King A.",
+					"jersey": "24",
+					"nation": "Gales",
+					"events": []
+				},
+				{
+					"name": "Narsingh L.",
+					"jersey": "11",
+					"nation": "Holanda",
+					"events": [
+						{
+							"type": "substitution-in",
+							"count": 0,
+							"metadata": "46'",
+							"at": "46'",
+							"extras": null
+						}
+					]
+				},
+				{
+					"name": "Nordfeldt K. (G)",
+					"jersey": "13",
+					"nation": "Suecia",
+					"events": []
+				},
+				{
+					"name": "Routledge W.",
+					"jersey": "15",
+					"nation": "Inglaterra",
+					"events": []
+				}
+			]
+		}
+	}
+}

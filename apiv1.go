@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"github.com/k0kubun/pp"
 	"log"
+	"errors"
 )
 
 func LinkApi(api iris.Party, manager *WorkManager) {
@@ -48,6 +49,14 @@ func LinkApi(api iris.Party, manager *WorkManager) {
 				return
 			}
 		}
+
+		c.StatusCode(iris.StatusInternalServerError)
+		c.JSON(iris.Map{
+			"data": nil,
+			"error": errors.New("work not found, check uri endpoint"),
+		})
+		return
+
 
 	})
 
