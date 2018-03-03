@@ -1,32 +1,39 @@
 package scraper
 
 type TeamBase struct {
-	Name  string
-	Score string
+	Name  string `json:"name"`
+	Score string `json:"score"`
 }
 
 type MatchScore struct {
-	Home TeamBase
-	Away TeamBase
+	Home TeamBase `json:"home"`
+	Away TeamBase `json:"away"`
 }
 
 type Event struct {
-	Type     string
-	Count    int
-	Metadata string
-	At       string
-	Extras   map[string]string
+	Type     string `json:"type"`
+	Count    int `json:"count"`
+	Metadata string `json:"metadata"`
+	At       string `json:"at"`
+	Extras   map[string]string `json:"extras"`
 }
 
 type EventPlayer struct {
-	Name   string
-	Jersey string
-	Nation string
+	Name   string `json:"name"`
+	Jersey string `json:"jersey"`
+	Nation string `json:"nation"`
 
-	Events []Event
+	Events []Event `json:"events"`
+}
+
+type BaseMatchEvent struct {
+	Name string `json:"name"`
+	Score string `json:"score"`
+	Events map[string][]EventPlayer `json:"events"`
 }
 
 type MatchEvents struct {
-	Home map[string][]EventPlayer
-	Away map[string][]EventPlayer
+	Home BaseMatchEvent `json:"home"`
+
+	Away BaseMatchEvent `json:"away"`
 }

@@ -58,11 +58,14 @@ func GetScoreFromMatch(urlMatch string) (MatchScore, error) {
 
 // GetEventsFromMatch ...
 func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
+
 	matchID := GetIdFromMatchUrl(urlMatch)
 	finalURL := InternalScoreBoardApi + "d_li_" + matchID + "_es_1"
 
-	finalEvents := MatchEvents{Home: map[string][]EventPlayer{}, Away: map[string][]EventPlayer{}}
-
+	finalEvents := MatchEvents{
+		Home: BaseMatchEvent{Events: map[string][]EventPlayer{}},
+		Away: BaseMatchEvent{Events: map[string][]EventPlayer{}},
+	}
 	c := colly.NewCollector()
 
 	// Only lineups
@@ -169,8 +172,8 @@ func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
 				log.Println(lName, rName)
 			} else {
 				if !firstTimeFlag {
-					finalEvents.Home[typeOfEvent] = lEventsPlayer
-					finalEvents.Away[typeOfEvent] = rEventsPlayer
+					finalEvents.Home.Events[typeOfEvent] = lEventsPlayer
+					finalEvents.Away.Events[typeOfEvent] = rEventsPlayer
 
 					lEventsPlayer = make([]EventPlayer, 0)
 					rEventsPlayer = make([]EventPlayer, 0)
@@ -187,14 +190,25 @@ func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
 			}
 		})
 
-		finalEvents.Home[typeOfEvent] = lEventsPlayer
-		finalEvents.Away[typeOfEvent] = rEventsPlayer
+		finalEvents.Home.Events[typeOfEvent] = lEventsPlayer
+		finalEvents.Away.Events[typeOfEvent] = rEventsPlayer
 	})
 
 	err := c.Post(finalURL, map[string]string{})
 	if err != nil {
 		return finalEvents, err
 	}
+
+	score, err := GetScoreFromMatch(urlMatch)
+	if err != nil {
+		return finalEvents, err
+	}
+	finalEvents.Home.Name = score.Home.Name
+	finalEvents.Away.Name = score.Away.Name
+
+	finalEvents.Home.Score = score.Home.Score
+	finalEvents.Away.Score = score.Away.Score
+
 
 	return finalEvents, nil
 }

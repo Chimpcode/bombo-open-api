@@ -71,10 +71,12 @@ func (manager *WorkManager) Run(step time.Duration) {
 			for i, work := range manager.WorksUpdating {
 				log.Printf("Deleting (%d)", i)
 				if work.State == WorkWaiting {
-					manager.WorksUpdating = append(
-						manager.WorksUpdating[:i],
-						manager.WorksUpdating[i+1:]...
-					)
+					if i<len(manager.WorksUpdating) {
+						manager.WorksUpdating = append(
+							manager.WorksUpdating[:i],
+							manager.WorksUpdating[i+1:]...
+						)
+					}
 
 				}
 			}
