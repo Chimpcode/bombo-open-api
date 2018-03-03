@@ -7,6 +7,7 @@ import (
 	"github.com/k0kubun/pp"
 	"log"
 	"errors"
+	"strings"
 )
 
 func LinkApi(api iris.Party, manager *WorkManager) {
@@ -15,7 +16,7 @@ func LinkApi(api iris.Party, manager *WorkManager) {
 		endpoint := c.Params().Get("endpoint")
 		pp.Println(endpoint)
 		for _, work := range manager.Works {
-			if work.Name == endpoint {
+			if strings.EqualFold(work.Name, endpoint) {
 				filePath := "./data/" + work.Type + "_" +work.Name + ".json"
 
 				pp.Println(filePath)
@@ -53,7 +54,7 @@ func LinkApi(api iris.Party, manager *WorkManager) {
 		c.StatusCode(iris.StatusInternalServerError)
 		c.JSON(iris.Map{
 			"data": nil,
-			"error": errors.New("work not found, check uri endpoint"),
+			"error": errors.New("work not found, check uri endpoint").Error(),
 		})
 		return
 

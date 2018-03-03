@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"bytes"
 	"os"
-	"./scraper"
+	"github.com/Chimpcode/bombo-open-api/scraper"
 )
 
 func CreateCSVFromStruct(teams map[string]*scraper.Team) {

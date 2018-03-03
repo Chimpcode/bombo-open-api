@@ -32,7 +32,7 @@ func LoadManagerFromFile (filePath string) (*WorkManager, error) {
 }
 
 func SaveWorkManagerState(wm *WorkManager) error {
-	data, err := json.Marshal(wm)
+	data, err := json.MarshalIndent(wm, "", "	")
 	if err != nil {
 		return err
 	}
