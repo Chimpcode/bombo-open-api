@@ -200,6 +200,8 @@ func GetEventsFromMatch(urlMatch string) (MatchEvents, error) {
 
 	c.OnRequest(func(r *colly.Request) {
 		pp.Println("(MATCH) Visiting", r.URL.String())
+		pp.Println("(MATCH) Visiting [HEADERS]", r.Headers)
+		pp.Println("(MATCH) Visiting [BODY]", r.Body)
 	})
 
 	c.OnResponse(func(r *colly.Response) {
